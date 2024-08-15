@@ -8,48 +8,125 @@ body {
 ::-webkit-scrollbar {
   width: 0px;
 }
+:root {
+  --cardTopPadding:4em;
+  --cardMargin:1vw;
+}
+
+
+.cards {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--cards), 250px);
+    gap: var(--cardMargin);
+    padding-bottom: 250px;
+    margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+    --index: 1;
+}
+#card2 {
+    --index: 2;
+}
+#card3 {
+    --index: 3;
+}
+#card4 {
+    --index: 4;
+}
+#card5 {
+    --index: 5;
+}
+#card6 {
+    --index: 6;
+}
+#card7 {
+    --index: 7;
+}
+
+.card {
+    position: sticky;
+    top: 120px;
+    padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+@media (max-width: 1024px) {
+  .card {
+    top: 10px;
+  }
+}
+
+.card-body {
+    box-sizing: border-box;
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+    @apply p-3 sm:p-4 rounded-2xl transition-all
+
+}
+
+.slide-in {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #0f0f0f;
+  transform-origin: bottom;
+  z-index: 100;
+}
+
+.slide-out {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: #c94c4c;
+  transform-origin: top;
+  z-index: 100;
+}
 
 @keyframes gradientAnimationBefore {
   0% {
     transform: rotate(0deg);
-    top: -136px;
-    left: -136px;
+    top: 30%;
+    left: 30%;
   }
   33% {
-    transform: rotate(70deg);
-    top: -290px;
-    left: -250px;
+    top: 27%;
+    left: 27%;
   }
   66%{
-    transform: rotate(70deg);
-    top: 20px;
-    left: -50px;
+    top: 33%;
+    left: 33%;
   }
   100% {
     transform: rotate(360deg);
-    top: -136px;
-    left: -136px;
+    top: 30%;
+    left: 30%;
   }
 }
 
 @keyframes gradientAnimationAfter {
   0% {
     transform: rotate(0deg);
-    top: 0;
-    right: -176px;
+    top: 30%;
+    right: 30%;
   }
   33% {
-    top: -70px;
-    right: 560px;
+    top: 33%;
+    right: 33%;
   }
   63% {
-    top: 450px;
-    right: 100px;
+    top: 27%;
+    right: 37%;
   }
   100% {
     transform: rotate(360deg);
-    top: 0;
-    right: -176px;
+    top: 30%;
+    right: 30%;
   }
   
 }
@@ -79,17 +156,59 @@ body {
   scroll-snap-align: center;
 }
 .bg-title {
-  color: hsla(0,0%,100%,.08);
-  
+  /* color: hsla(0, 0%, 100%, 0.08); */
+
+  /* WebKit-based browsers (Safari, Chrome) */
   -webkit-background-clip: text;
-  background-image: radial-gradient(circle closest-side, #1CA3EB
-  , #621DBD, transparent
-  );
+  /* Firefox */
+  background-clip: text;
+  /* WebKit-based browsers (Safari, Chrome) */
+  -webkit-text-fill-color: transparent;
+  /* Firefox */
+  text-fill-color: transparent;
+
+  background-image: -webkit-radial-gradient(circle closest-side, #1CA3EB, #621DBD, transparent);
+  background-image: radial-gradient(circle closest-side, #1CA3EB, #621DBD, transparent);
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: 500px 500px;
-  opacity: 0.1; 
+  opacity: 0.07;
+
+  /* WebKit-based browsers (Safari, Chrome) */
+  -webkit-transition: all 1.2s cubic-bezier(.19,1,.22,1);
+  /* Standard syntax */
   transition: all 1.2s cubic-bezier(.19,1,.22,1);
+}
+
+.icon-placeholder {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  flex: 40px 0;
+  margin-right: 20px;
+}
+
+.text-placeholder {
+  border-radius: 5px;
+  width: 200px;
+  height: 20px;
+  flex: 1;
+}
+
+.snapparent {
+  scroll-snap-type:y mandatory;
+  scroll-padding-top: 50px; 
   
 }
 
+.snapchild {
+  scroll-snap-align: start;
+  margin-bottom: 50px; /* Adjust as needed */
+}
+
+.cls-1 {
+  fill: "#231f20"
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}

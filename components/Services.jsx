@@ -1,5 +1,5 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Script from "next/script";
 import { useState, useEffect, useRef } from "react";
 
@@ -16,28 +16,22 @@ const Services = () => {
     if (!isInServices) {
       setIsInServices(true);
     }
-    setServices((prevServices) =>
-      prevServices.map((service, i) =>
-        i === index ? { ...service, isActive: true } : service
-      )
-    );
   };
-
   const handleViewportLeave = (index) => {
-    if (isInServices) {
-      setIsInServices(false);
-    }
-
-    setServices((prevServices) =>
-      prevServices.map((service, i) =>
-        i === index ? { ...service, isActive: false } : service
-      )
-    );
+    setIsInServices(false);
+    console.log("viewport left");
   };
-
   const spotlightSize = 400;
-  const titleRef = useRef(null);
-
+  const titleRef = useRef();
+  const { scrollYProgress } = useScroll({
+    target: titleRef,
+    offset: ["0 1", "1 0"],
+  });
+  const opacity1 = useTransform(
+    scrollYProgress,
+    [0.2, 0.3, 0.6, 0.7],
+    [0, 0.08, 0.08, 0]
+  );
   useEffect(() => {
     const handleMouseMove = (event) => {
       const titleElement = titleRef.current;
@@ -61,28 +55,34 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="flex flex-col relative">
-      {isInServices && (
+    <motion.div
+      className="flex flex-col bg-neutral-950 relative select-none w-[100vw]"
+      onViewportLeave={() => handleViewportLeave()}
+    >
+      <div className="absolute h-full z-10 opacity-15  lg:opacity-70 xl:opacity-100">
         <motion.img
           src="/service-image.png"
-          className="z-20  top-20 sticky left-44"
+          className="z-20  top-20 sticky lg:w-[500px] xl:w-[600px] 2xl:w-[700px] saturate-[.8]"
           width={700}
           height={700}
           initial={{ opacity: 0, x: -400 }}
           whileInView={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -400 }}
           transition={{ duration: 1.2, ease: [0, 0.01, 0, 1], delay: 0.2 }}
         />
-      )}
-      <div className="bg-sky-100 rounded-full w-[60%] h-[60%] fixed top-0 left-0 blur-3xl -z-10 max-w-[100vw]" />
-      <div className="bg-purple-100 rounded-full w-[60%] h-[80%] fixed bottom-0 right-0 blur-3xl -z-10 max-w-[100vw]" />
+      </div>
+
+      <motion.div className="absolute h-full w-[100vw]">
+        <div className="bg-sky-700/20 rounded-full w-[60%] h-[70vh] sticky top-0 left-0 blur-3xl " />
+        <div className="bg-purple-700/15 rounded-full w-[80vw] h-[70vh] sticky top-[40vh] right-0 ml-auto blur-3xl " />
+      </motion.div>
       <div className="sticky top-0 left-0 flex items-center justify-center">
-        <p
+        <motion.p
           ref={titleRef}
-          className="bg-title bg-clip-text text-transparent bg-neutral-400/80 text-[200px] w-[100vw] font-bold break-words opacity-100 leading-[110%] text-center line-clamp-5"
+          className="bg-title bg-clip-text text-transparent bg-neutral-300/50 text-[100px] lg:text-[200px] w-[100vw] font-bold break-words opacity-100 leading-[110%]  lg:text-center h-[100vh] overflow-hidden"
+          style={{ opacity: opacity1 }}
         >
-          METAMARKETIERSMETAMARKETIERSMETAMARKETIERSMETAMARKETIERSMETAMARKETIERS
-        </p>
+          METAMARKETIERSMETAMARKETIERSMETAMARKETIERSMETAMARKETIERSMETAMARKETIERSMETAMARKETIERSMETAMARKETIERS
+        </motion.p>
       </div>
       {services.map((service, index) => (
         <Service
@@ -90,34 +90,55 @@ const Services = () => {
           name={service.name}
           isActive={service.isActive}
           onEnter={() => handleViewportEnter(index)}
+          onLeave={() => handleViewportLeave(index)}
         />
       ))}
-    </div>
+    </motion.div>
   );
 };
 
 const Service = ({ name, isActive, onEnter, onLeave }) => {
+  const serviceRef = useRef();
+  const { scrollYProgress } = useScroll({
+    target: serviceRef,
+    offset: ["0 1", "1 0"],
+  });
+  const y1 = useTransform(
+    scrollYProgress,
+    [0.2, 0.3, 0.6, 0.7],
+    [0, -200, 0, -200]
+  );
+  const opacity1 = useTransform(
+    scrollYProgress,
+    [0.2, 0.3, 0.6, 0.7],
+    [0, 1, 1, 0]
+  );
   return (
-    <div className="flex w-[100vw] h-[100vh] justify-center items-center relative">
+    <motion.div
+      className="flex w-[100vw] h-[75vh] justify-center items-center relative z-20"
+      ref={serviceRef}
+    >
       <motion.div
-        className="uppercase inset-y-auto right-96 absolute w-[500px]"
+        className="uppercase inset-y-auto lg:right-3 xl:right-12 2xl:right-44 absolute w-[340px] sm:w-[400px] md:w-[500px] lg:w-[600px] inset-x-auto "
         initial={{ opacity: 0 }}
-        animate={{ opacity: isActive ? 1 : 0 }}
-        onViewportEnter={onEnter}
         transition={{ duration: 0.95 }}
+        style={{ y: y1, opacity: opacity1 }}
+        onViewportEnter={() => onEnter()}
       >
-        <h3 className="text-4xl my-auto pb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-500">
+        <h3 className="text-4xl my-auto pb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r w-fit from-blue-400 to-purple-500 ">
           PROMOTIONS
         </h3>
-        <p className="pb-2">GOOGLE ADS - SEO - CORE - ANALYTICS</p>
-        <p>
+        <p className="pb-2 text-neutral-300 text-sm lg:text-xl">
+          GOOGLE ADS - SEO - CORE - ANALYTICS
+        </p>
+        <p className="text-neutral-100 text-base lg:text-lg">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
           laudantium reprehenderit, quod officiis magnam maxime adipisci rem
           quibusdam delectus eos non voluptatum sunt? Voluptatum repellat in
           adipisci nihil iste accusamus?
         </p>
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
