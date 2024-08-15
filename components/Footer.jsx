@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div className="sticky bottom-0 h-[40rem] w-screen bg-gradient-radial to-purple-950 from-indigo-950 z-0 flex flex-col justify-center items-center">
+    <div className="sticky bottom-0 h-[40rem] w-screen bg-gradient-radial to-purple-950 from-indigo-950 z-0 flex flex-col justify-end pb-5 items-center">
       <div className="max-w-7xl bg-gradient-to-r from-purple-200 to-sky-200  rounded-lg mx-4 lg:mx-14 flex justify-center items-center p-2 lg:p-4 relative">
         <Image src={"/footer-banner-bg.png"} fill alt="footer background" className="object-cover z-0 opacity-30"/>
         <div className="flex flex-col justify-center items-center lg:items-start p-2 lg:p-14 gap-y-4 z-10 text-center lg:text-start">

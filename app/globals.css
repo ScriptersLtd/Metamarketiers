@@ -9,7 +9,7 @@ body {
   width: 0px;
 }
 :root {
-  --cardTopPadding:4em;
+  --cardTopPadding:2.5em;
   --cardMargin:1vw;
 }
 
@@ -49,7 +49,7 @@ body {
 
 .card {
     position: sticky;
-    top: 120px;
+    top: 70px;
     padding-top: calc(var(--index) * var(--cardTopPadding));
 }
 

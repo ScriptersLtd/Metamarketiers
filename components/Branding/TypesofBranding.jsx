@@ -32,7 +32,7 @@ const TypesofBranding = () => {
         <motion.div
 
           style={{ x: x1 }}
-          className="sticky top-60 flex w-[2000px]  justify-center items-center gap-5
+          className="sticky top-32 flex w-[2000px]  justify-center items-center gap-5
         xl:gap-10 z-10"
         >
           <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} />

@@ -8,6 +8,7 @@ import { useMediaQuery } from "react-responsive";
 
 const Progress = () => {
   const isBigScreen = useMediaQuery({ query: "(min-width: 1280px)" });
+  const isLaptop = useMediaQuery({ query: "(max-height: 768px)" });
 
     const [isHovered,setIsHovered] = useState(false)
     const ImageRef = useRef();
@@ -21,11 +22,11 @@ const Progress = () => {
   return (
     <div className="relative h-[1600px] lg:h-[2500px] xl:h-[3000px] ">
     <div ref={ImageRef} className="bg-neutral-950 relative h-[1600px] lg:h-[2500px] xl:h-[3000px] z-10 pb-5">
-      <div className="lg:sticky top-10 pt-5 flex flex-col lg:flex-row justify-center lg:items-start items-center gap-10 lg:gap-2 xl:gap-10 lg:px-4">
-        <div className="h-[620px]  w-[320px] sm:h-[570px] sm:w-[550px] md:w-[600px] lg:h-[700px] xl:w-[350px] xl:h-[740px] flex flex-col justify-start lg:justify-center xl:justify-between bg-neutral-900 rounded-xl">
+      <div className="lg:sticky top-0 pt-5 flex flex-col lg:flex-row justify-center lg:items-start items-center gap-10 lg:gap-2 xl:gap-10 lg:px-4">
+        <div className={`h-[620px]  w-[320px] sm:h-[570px] sm:w-[550px] md:w-[600px] lg:h-[700px] xl:w-[350px] xl:h-[${isLaptop ? "600px" : "740px"}] flex flex-col justify-start lg:justify-center xl:justify-between bg-neutral-900 rounded-xl`}>
           <div className="flex flex-col justify-center items-center p-5">
             <div className="flex flex-col max-w-[400px] gap-y-10 lg:gap-y-5">
-              <p className="text-[20px] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r  from-purple-700 to-sky-500 w-fit">
+              <p className="text-[20px] xl:text-[25px] text-center font-semibold text-transparent bg-clip-text bg-gradient-to-r  from-purple-700 to-sky-500 w-fit">
                 Our Progress With Clients
               </p>
               <p className="text-[20px] text-neutral-300">
@@ -52,11 +53,11 @@ const Progress = () => {
             </div>
           </div>
         </div>
-        <div className="h-[850px] w-[320px] sm:w-[550px] sm:h-[700px] md:w-[600px] md:h-[630px]  lg:w-[1000px] lg:h-[700px] xl:h-[740px] bg-neutral-900 rounded-xl">
-          <div className="flex justify-start xl:justify-center ml-16 xl:ml-0 gap-28 items-start pt-10">
+        <div className={`h-[850px] w-[320px] sm:w-[550px] sm:h-[700px] md:w-[600px] md:h-[630px]  lg:w-[1000px] lg:h-[700px] xl:h-[${isLaptop ? "600px" : "740px"}] bg-neutral-900 rounded-xl`}>
+          <div className={`flex justify-start xl:${isLaptop ? "justify-between mr-4" : "justify-center"} ml-16 xl:ml-0 gap-28 items-start pt-10`}>
            
             <motion.img style={{y: isBigScreen ? y1 : y2,rotate:rotate}}  src={"/rollingtype.png"} alt="rolling" width={120} height={120} className="" />
-            <Image src={"/hands.png"} alt="hands" width={650} height={300} className="object-contain hidden xl:block rounded-xl" />
+            <Image src={"/hands.png"} alt="hands" width={650} height={300} className={`object-contain hidden xl:block rounded-xl xl:h-[${isLaptop ? "150px" : "auto"}] xl:w-[${isLaptop ? "400px" : "auto" }]`}  />
           </div>
 
           <div className="flex flex-col justify-center  items-start pt-20  lg:pr-0">

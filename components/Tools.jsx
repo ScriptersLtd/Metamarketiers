@@ -63,13 +63,13 @@ const Tools = () => {
                
             transition: "transform 1s", 
           }}
-          className="text-[40px] lg:text-[90px]  h-fit  font-bold text-transparent bg-clip-text bg-gradient-to-r  from-purple-700 to-sky-500 w-fit z-10"
+          className="text-[40px] lg:text-[90px]  h-fit  font-bold text-transparent bg-clip-text bg-gradient-to-r  from-purple-700 to-sky-500 w-fit z-10 "
         >
           Tools We Use
         </motion.h2>
       </div>
-      <di v className="flex pt-[1000px]  justify-center items-center">
-      <ul className="cards">
+      <div className="flex pt-[1000px]  justify-center items-center">
+      <ul className=" cards">
         <Card
           id={"card1"}
           image={"/figma.png"}
@@ -170,7 +170,7 @@ const Tools = () => {
           }
         />
       </ul>
-    </di>
+    </div>
    
     </div>
   );
@@ -180,13 +180,13 @@ const Tools = () => {
 const Card = ({ id, heading, desc,image,height, width }) => {
   return (
     <li className="card  w-[300px] sm:w-[400px] md:w-[600px] lg:w-[800px] " id={id}>
-      <div className="card-body h-[320px] md:h-[240px] p-4 backdrop-blur-xl  bg-neutral-900/50 border-[0.5px] border-neutral-500 w-full">
-        <h3 className="font-bold text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r  from-purple-700 to-sky-500 w-fit">
+      <div className="card-body h-[260px] md:h-[200px] p-4 backdrop-blur-xl  bg-neutral-900/50 border-[0.5px] border-neutral-500 w-full">
+        <h3 className="font-bold text-xl lg:text-2xl md:text-3xl text-transparent bg-clip-text bg-gradient-to-r  from-purple-700 to-sky-500 w-fit">
           {heading}
         </h3>
-        <div className="flex flex-col md:flex-row gap-y-5 justify-center gap-x-6 items-center">
-        <p className="mt-4 opacity-75 text-sm text-neutral-100 md:text-base max-w-xl">{desc}</p>
-        <Image src={image} alt="Tool image" height={height} width={width} className="object-contain w-[170px] h-[120px] lg:w-[200px] lg:h-[160px]  "  />
+        <div className="flex flex-col md:flex-row gap-y-3 justify-center gap-x-6 items-center">
+        <p className="mt-1 lg:mt-4 opacity-75 text-xs text-neutral-100 md:text-base max-w-xl">{desc}</p>
+        <Image src={image} alt="Tool image" height={height} width={width} className="object-contain w-[170px] h-[120px] lg:w-[180px] lg:h-[130px]  "  />
         </div>
       </div>
     </li>

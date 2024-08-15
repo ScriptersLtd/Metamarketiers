@@ -2,10 +2,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
+import Footer from "../Footer";
 const PerformanceComponent = () => {
   return (
     <motion.div className="flex flex-col w-screen overflow-clip relative bg-neutral-950">
-      <div className="relative h-fit">
+      <div className="relative h-fit z-20 bg-neutral-950">
         <div className="absolute top-44 right-[300px] h-[750px] w-[750px]  rounded-[220px] mix-blend-normal bg-purple-600 opacity-15 blur-3xl z-10"></div>
         <div className="absolute top-52 left-[200px] h-[700px] w-[700px] rounded-[220px] bg-blue-600 mix-blend-normal opacity-15 blur-3xl z-10"></div>
         <div className="flex flex-col xl:flex-row gap-x-4 justify-center items-center w-screen pb-36 gap-y-4">
@@ -14,6 +15,7 @@ const PerformanceComponent = () => {
           <PerformanceCard image={"/development/benefit-image-3.png"} />
         </div>
       </div>
+      <Footer />
     </motion.div>
   );
 };

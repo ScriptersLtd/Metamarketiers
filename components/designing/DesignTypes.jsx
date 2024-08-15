@@ -161,44 +161,72 @@ const DesignTypes = () => {
             
           )}
           {inView === "card2" && (
-            <motion.p
-            key="card2"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-            >
+            <motion.div
+              key="card2"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-neutral-950/25 2xl:bg-transparent 2xl:backdrop-blur-none backdrop-blur-xl p-2 rounded-l-lg flex flex-col gap-y-5"
+              >
+              <p className="text-left text-sm md:text-lg ">
               2Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil
               totam sapiente autem. Exercitationem corporis doloribus in eaque
-              beatae, enim animi dolor 
-            </motion.p>
+              beatae, enim animi dolor non ipsam omnis, molestiae </p>
+               <div className="bg-purple-600 p-2 text-center rounded-sm flex justify-center items-center gap-x-2 xl:hidden">
+                <LockKeyholeOpen />
+                Order Now
+                </div>
+
+            </motion.div>
+            
+            
           )}
           {inView === "card3" && (
-            <motion.p
+            <motion.div
               key="card3"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-            >
+              className="bg-neutral-950/25 2xl:bg-transparent 2xl:backdrop-blur-none backdrop-blur-xl p-2 rounded-l-lg flex flex-col gap-y-5"
+              >
+              <p className="text-left text-sm md:text-lg ">
               3Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil
               totam sapiente autem. Exercitationem corporis doloribus in eaque
-              beatae, enim animi dolor 
-            </motion.p>
+              beatae, enim animi dolor non ipsam omnis, molestiae </p>
+               <div className="bg-purple-600 p-2 text-center rounded-sm flex justify-center items-center gap-x-2 xl:hidden">
+                <LockKeyholeOpen />
+                Order Now
+                </div>
+
+            </motion.div>
+            
+            
           )}
           {inView === "card4" && (
-            <motion.p
+            <motion.div
               key="card4"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
-            >
+              className="bg-neutral-950/25 2xl:bg-transparent 2xl:backdrop-blur-none backdrop-blur-xl p-2 rounded-l-lg flex flex-col gap-y-5"
+              >
+              <p className="text-left text-sm md:text-lg ">
               4Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam nihil
               totam sapiente autem. Exercitationem corporis doloribus in eaque
-              beatae, enim animi dolor non ipsam omnis, 
-            </motion.p>
+              beatae, enim animi dolor non ipsam omnis, molestiae </p>
+               <div className="bg-purple-600 p-2 text-center rounded-sm flex justify-center items-center gap-x-2 xl:hidden">
+                <LockKeyholeOpen />
+                Order Now
+                </div>
+
+            </motion.div>
+            
+            
           )}
+         
         </AnimatePresence>
 
       </div>

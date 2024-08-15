@@ -69,7 +69,7 @@ const DevelopmentHero = () => {
       <motion.img
         src="/development/development-hero-5.png"
         alt="service-shape"
-        className="hidden xl:block absolute bottom-72 2xl:bottom-44 right-96"
+        className="hidden xl:block absolute bottom-72 2xl:bottom-44 right-72"
         width={170}
         height={170}
         initial={{ y: 50, opacity: 0, x: 80 }}
