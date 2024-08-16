@@ -32,12 +32,12 @@ const AboutHero = () => {
   const scope = useTaglineAnimation();
   return (
     <div className="flex justify-center relative">
-      <div className="font-bold text-[15vw] text-neutral-100 h-screen mt-32">
+      <div className="font-bold text-[15vw] text-neutral-100 h-[700px] md:h-[1000px] pt-32 z-20">
         <h1 className="mb-0" ref={scope}>
           {[...spacedTitle].map((letter, index) => (
             <motion.span
               key={index}
-              initial={{ opacity: 0, y: 400 }}
+              initial={{ opacity: 0, y: 50 }}
               transition={{ ease: "anticipate" }}
               className="inline-block"
             >
