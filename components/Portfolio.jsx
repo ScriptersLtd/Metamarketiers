@@ -126,7 +126,7 @@ const PortfolioCard = ({ classes, y, scale, opacity, number,image }) => {
             height={200}
             width={500}
             alt="img"
-            className="object-contain w-[350px] md:w-[500px] rounded-lg"
+            className=" w-[350px] md:w-[600px] rounded-lg"
           />
         </div>
       </motion.div>

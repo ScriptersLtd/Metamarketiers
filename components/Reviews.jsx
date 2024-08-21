@@ -70,12 +70,12 @@ const Reviews = () => {
           </motion.div>
         </motion.div>
         <motion.div className="z-20 space-y-40 mx-5 sm:mx-10 md:mx-16 lg:mx-44 relative">
-          <ReviewCard />
-          <ReviewCard right />
-          <ReviewCard />
-          <ReviewCard right />
-          <ReviewCard />
-          <ReviewCard right />
+          <ReviewCard profimg={"/review1.png"} />
+          <ReviewCard right profimg={"/review3.png"} />
+          <ReviewCard profimg={"/review4.png"} />
+          <ReviewCard right profimg={"/review5.png"} />
+          <ReviewCard profimg={"/review2.png"}/>
+          <ReviewCard right profimg={"/review6.png"} />
         </motion.div>
       </div>
       <Footer />
@@ -83,7 +83,7 @@ const Reviews = () => {
   );
 };
 
-const ReviewCard = ({ right }) => {
+const ReviewCard = ({ right,profimg }) => {
   return (
     <div
       className={`${
@@ -93,7 +93,7 @@ const ReviewCard = ({ right }) => {
       <Image src={"/comma.png"} alt="quotation marks" className="h-[50px] w-[50px] object-contain" width={50} height={40} />
       <p className=" italic font-light sm:ml-4 text-sm sm:text-base text-neutral-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, molestias. Numquam, ipsam. Accusantium mollitia corrupti dolore delectus quasi</p>
       <div className="flex items-center justify-center">
-      <Image src={"/ball-1.png"} width={80} height={80} alt="ball" />
+      <Image src={profimg} width={80} height={80} alt="ball" />
       <div className="flex flex-col text-sm ml-2">
       <p className="font-bold text-sm sm:text-base text-neutral-200">client name 1</p>
       <p className="font-light text-sm sm:text-base text-neutral-300">designation</p>

@@ -35,19 +35,18 @@ const TypesofBranding = () => {
           className="sticky top-32 flex w-[2000px]  justify-center items-center gap-5
         xl:gap-10 z-10"
         >
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} />
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} />
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} />
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} />
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} />
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} />
+          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype1.jpg"} />
+          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype2.jpg"} />
+          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype3.jpg"} />
+          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype4.jpg"} />
+         
         </motion.div>
       </div>
     </div>
   );
 };
 
-const TypeCard = ({isBigScreen, isSmallScreen}) => {
+const TypeCard = ({isBigScreen, isSmallScreen,imgsrc}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   return (
@@ -61,7 +60,7 @@ const TypeCard = ({isBigScreen, isSmallScreen}) => {
       <motion.img
         animate={{ height: isBigScreen ? isHovered ? 350 : 500 : isSmallScreen ?  isClicked ? 250 : 500 : 500  }}
         transition={{ duration: 1, ease: "easeInOut" }}
-        src={"/type.png"}
+        src={imgsrc}
         className="h-[500px]  w-[500px]  rounded-sm object-cover z-10"
         alt="branding type"
       />

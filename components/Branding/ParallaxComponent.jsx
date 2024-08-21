@@ -39,7 +39,7 @@ const ParallaxComponent = () => {
             className="flex h-full flex-col gap-y-10"
           >
             <Image
-              src={"/image_4.png"}
+              src={"/parallax6.jpg"}
               alt="parallaximg"
               className="h-[450px] object-cover w-[330px]"
               height={450}
@@ -47,7 +47,7 @@ const ParallaxComponent = () => {
             />
 
             <Image
-              src={"/image_4.png"}
+              src={"/parallax2.jpg"}
               alt="parallaximg"
               className="h-[450px] mt-44 object-cover w-[330px]"
               height={450}
@@ -55,7 +55,7 @@ const ParallaxComponent = () => {
             />
 
             <Image
-              src={"/image_4.png"}
+              src={"/parallax3.jpg"}
               alt="parallaximg"
               className="h-[450px] mt-20 object-cover w-[330px]"
               height={450}
@@ -67,7 +67,7 @@ const ParallaxComponent = () => {
             className="hidden  lg:flex h-full flex-col gap-y-10"
           >
             <Image
-              src={"/image_4.png"}
+              src={"/parallax4.jpg"}
               alt="parallaximg"
               className="h-[450px] mt-44 object-cover w-[330px]"
               height={450}
@@ -75,7 +75,7 @@ const ParallaxComponent = () => {
             />
 
             <Image
-              src={"/image_4.png"}
+              src={"/parallax5.jpg"}
               alt="parallaximg"
               className="h-[450px] mt-32 object-cover w-[330px]"
               height={450}
@@ -83,7 +83,7 @@ const ParallaxComponent = () => {
             />
 
             <Image
-              src={"/image_4.png"}
+              src={"/parallax1.jpg"}
               alt="parallaximg"
               className="h-[450px] mt-44 object-cover w-[330px]"
               height={450}

@@ -334,10 +334,10 @@ const DesignTypes = () => {
             </div>
           </div>
         </div>
-      <PortfolioCard title={"Card 1"} cardnumber={"card1"} name={"XYZ Fitness"} tag1={"App"} tag2={"Design"} setInView={setInView}  />
-      <PortfolioCard title={"Card 1"} cardnumber={"card2"} name={"XYZ Fitness"} tag1={"App"} tag2={"Design"} setInView={setInView}  />
-      <PortfolioCard title={"Card 1"} cardnumber={"card3"} name={"XYZ Fitness"} tag1={"App"} tag2={"Design"} setInView={setInView}  />
-      <PortfolioCard title={"Card 1"} cardnumber={"card4"} name={"XYZ Fitness"} tag1={"App"} tag2={"Design"} setInView={setInView}  />
+      <PortfolioCard title={"Card 1"} cardnumber={"card1"} name={"XYZ Fitness"} tag1={"App"} tag2={"Design"} setInView={setInView} imgsrc={"/designimg1.png"} />
+      <PortfolioCard title={"Card 1"} cardnumber={"card2"} name={"XYZ Fitness"} tag1={"App"} tag2={"Design"} setInView={setInView} imgsrc={"/designimg2.png"} />
+      <PortfolioCard title={"Card 1"} cardnumber={"card3"} name={"XYZ Fitness"} tag1={"App"} tag2={"Design"} setInView={setInView} imgsrc={"/designimg3.png"} />
+      <PortfolioCard title={"Card 1"} cardnumber={"card4"} name={"XYZ Fitness"} tag1={"App"} tag2={"Design"} setInView={setInView} imgsrc={"/designimg4.png"} />
 
         
       </div>
@@ -348,18 +348,15 @@ const DesignTypes = () => {
 };
 
 
-const PortfolioCard = ({title,cardnumber,name,tag1,tag2, setInView}) => {
+const PortfolioCard = ({title,cardnumber,name,tag1,tag2,imgsrc, setInView}) => {
   return (
     <div className="w-full ">
     <div className="flex flex-col gap-y-2 xl:gap-y-10 justify-center items-center">
       <p className="text-[30px] md:text-[45px] xl:text-[60px]  text-transparent bg-clip-text bg-gradient-to-r font-bold from-purple-700 to-sky-500 w-fit">
         {title}
       </p>
-      <motion.div
-        onViewportEnter={() => setInView(cardnumber)}
-        className="h-[450px] sm:h-[500px] md:h-[550px] w-[300px] md:w-[350px]  bg-emerald-700 rounded-xl"
-      ></motion.div>
-      {/* <Image src={"/adsense.png"} width={500} height={600} alt="placeholder image" className="h-[550px]" /> */}
+    
+      <motion.img onViewportEnter={() => setInView(cardnumber)} src={imgsrc} width={500} height={600} alt="placeholder image" className="h-[450px] sm:h-[500px] md:h-[550px] object-cover w-auto rounded-xl" />
       <div className="flex flex-col gap-y-4">
         <p className="font-bold text-neutral-200 text-center text-2xl lg:text-4xl">{name}</p>
         <div className="flex gap-5 justify-center items-center">
