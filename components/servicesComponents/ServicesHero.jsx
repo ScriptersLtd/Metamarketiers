@@ -4,16 +4,17 @@ import { motion } from "framer-motion"
 const ServicesHero = () => {
   return (
     <div className="flex justify-start items-center h-[60rem] flex-col overflow-hidden w-[100vw] relative bg-neutral-950 ">
-    <div className="absolute top-52 left-[50%] h-[350px] w-[550px] rounded-[120px] bg-purple-600 z-20 opacity-20 blur-3xl"></div>
-   <div className="absolute top-96 right-[40%] h-[400px] w-[600px] rounded-[120px] bg-blue-600 z-20 opacity-20 blur-3xl"></div>
+    <div className="absolute top-52 left-[50%] h-[350px] w-[550px] rounded-[120px] bg-purple-600 opacity-20 blur-3xl"></div>
+   <div className="absolute top-96 right-[40%] h-[400px] w-[600px] rounded-[120px] bg-blue-600 opacity-20 blur-3xl"></div>
 
    <motion.h1
-     className=" font-semibold text-center text-neutral-200  text-3xl xl:text-4xl 2xl:text-5xl pb-6 leading-tight flex flex-col max-w-4xl z-10 mt-24 lg:mt-56 px-3"
+     className=" font-semibold text-center text-neutral-200  text-3xl xl:text-4xl 2xl:text-5xl pb-6 leading-tight flex flex-col max-w-4xl z-10 mt-36 lg:mt-56 px-3"
      initial={{ y: 100, opacity: 0 }}
      animate={{ y: 0, opacity: 1 }}
      transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.2 }}
    >
-     isaidfu isadufn ybguywbd uaywbda ausyduysa uyas dyusa ysasy usi fu
+     Skyrocket Your Online Presence with Comprehensive Digital Expertise!
+
    </motion.h1>
    <motion.p
      className="text-center text-neutral-100 max-w-4xl z-10 px-3"
@@ -21,11 +22,7 @@ const ServicesHero = () => {
      animate={{ y: 0, opacity: 1 }}
      transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.3 }}
    >
-     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-     officia quaerat doloribus? Deserunt nesciunt ex placeat, sapiente, quas
-     omnis ipsum neque consequuntur inventore voluptate vero animi iure iste
-     quia possimus cumque tempore, asperiores sit fuga necessitatibus
-     suscipit doloribus aliquid nulla!
+     Ready to dominate the digital space? Trust our leading digital marketing agency to elevate your brand with customized strategies and innovative designs, turning your vision into a compelling digital force!
    </motion.p>
    <motion.img
      src="/servicepageimg2.png"

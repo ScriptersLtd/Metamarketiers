@@ -12,7 +12,7 @@ const MarketingHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.2 }}
       >
-        isaidfu isadufn ybguywbd uaywbda ausyduysa uyas dyusa ysasy usi fu
+        Dominate Online Space with Next-Gen Digital Marketing Services!
       </motion.h1>
       <motion.p
         className="text-center text-neutral-100 max-w-4xl z-10 px-3"
@@ -20,11 +20,10 @@ const MarketingHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.3 }}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-        officia quaerat doloribus? Deserunt nesciunt ex placeat, sapiente, quas
-        omnis ipsum neque consequuntur inventore voluptate vero animi iure iste
-        quia possimus cumque tempore, asperiores sit fuga necessitatibus
-        suscipit doloribus aliquid nulla!
+        Achieve more than just clicks—get real, tangible results with the USA’s
+        best digital marketing agency! We drive your growth by optimizing your
+        presence with targeted tactics that work perfectly for you. Prepare to
+        beat your competitors and turn your digital potential into profit!
       </motion.p>
       <motion.img
         src="/insta3d.png"

@@ -70,20 +70,20 @@ const Reviews = () => {
           </motion.div>
         </motion.div>
         <motion.div className="z-20 space-y-40 mx-5 sm:mx-10 md:mx-16 lg:mx-44 relative">
-          <ReviewCard profimg={"/review1.png"} />
-          <ReviewCard right profimg={"/review3.png"} />
-          <ReviewCard profimg={"/review4.png"} />
-          <ReviewCard right profimg={"/review5.png"} />
-          <ReviewCard profimg={"/review2.png"}/>
-          <ReviewCard right profimg={"/review6.png"} />
+          <ReviewCard name={"Anderson Mitchell"} designation={"eCommerce Store Owner"} content={"Thanks to Aiosols, our online presence has never been stronger. Their SEO strategies brought us to the top of search results, and our traffic has skyrocketed! They really know how to make a brand shine."}  profimg={"/review1.png"} />
+          <ReviewCard name={"Jake Lawson"} designation={"Fitness Coach"} content={"Aiosols transformed our brand image with their brilliant design and branding services. They captured our essence perfectly, giving us a fresh, modern look that resonates with our audience. Our brand finally feels ‘us’! "} right profimg={"/review3.png"} />
+          <ReviewCard name={"Samuel Thompson"} designation={"SaaS Business Owner"} content={"Working with them was a game-changer. Aiosols logo design expertise, combined with a strategic, data-driven marketing approach, was tailored to our needs. We saw a 30% increase in leads within the first month! They’re not just service providers; they’re partners in our success. "} profimg={"/review4.png"} />
+          <ReviewCard name={"Stephanie White"} designation={"Retail Business Owner"} content={"Our website was outdated and clunky, but Aiosols revamped it into a stunning, user-friendly masterpiece. The new design has improved our customer experience and increased our sales conversion rates significantly."} right profimg={"/review5.png"} />
+          <ReviewCard name={" Lucy Parker"} designation={"Travel Blogger"} content={"I’ve never seen our website perform this well! Their team optimized everything from our keywords to our site speed and the results speak for themselves. More traffic, more engagement, and more sales. It’s been a win-win!"} profimg={"/review2.png"}/>
+          <ReviewCard name={"Mark Henderson"} designation={"Restaurant Owner"} content={"Aiosols holistic approach to digital marketing helped us refine our strategies and reach our target audience more effectively. From social media to content marketing, their expertise has taken our online presence to the next level."} right profimg={"/review6.png"} />
         </motion.div>
       </div>
-      <Footer />
+      <Footer line1={"Stand out from the competition with our all-in-one digital marketing solutions that engage, convert, and expand your business in today’s crowded market!"} heading={"Let’s Build a Winning Website That Works Overtime for Your Brand!"} button={"Change Your Game!"} />
     </div>
   );
 };
 
-const ReviewCard = ({ right,profimg }) => {
+const ReviewCard = ({ name,designation,content,right,profimg }) => {
   return (
     <div
       className={`${
@@ -91,12 +91,12 @@ const ReviewCard = ({ right,profimg }) => {
       } w-[250px] sm:w-[460px] md:w-[520px] lg:w-[600px] backdrop-blur-lg bg-neutral-700/40 shadow-lg z-20 rounded-md flex flex-col justify-start items-start p-3 sm:p-5 gap-y-3 uppercase`}
     >
       <Image src={"/comma.png"} alt="quotation marks" className="h-[50px] w-[50px] object-contain" width={50} height={40} />
-      <p className=" italic font-light sm:ml-4 text-sm sm:text-base text-neutral-300">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, molestias. Numquam, ipsam. Accusantium mollitia corrupti dolore delectus quasi</p>
+      <p className=" italic font-light sm:ml-4 text-sm sm:text-base text-neutral-300">{content}</p>
       <div className="flex items-center justify-center">
       <Image src={profimg} width={80} height={80} alt="ball" />
       <div className="flex flex-col text-sm ml-2">
-      <p className="font-bold text-sm sm:text-base text-neutral-200">client name 1</p>
-      <p className="font-light text-sm sm:text-base text-neutral-300">designation</p>
+      <p className="font-bold text-sm sm:text-base text-neutral-200">{name}</p>
+      <p className="font-light text-sm sm:text-base text-neutral-300">{designation}</p>
       </div>
       </div>
     </div>

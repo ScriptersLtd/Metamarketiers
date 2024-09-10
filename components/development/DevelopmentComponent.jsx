@@ -37,8 +37,8 @@ const DevelopmentComponent = () => {
           style={{ x: isSmallScreen? smallX1 :x1 }}
         >
           <DevelopementCard1 scroll={scrollYProgress}  />
-          <DevelopementCard2 scroll={scrollYProgress} background={"url(/development/bg-card-2.png)"} images={cardImages2} scrollY={[0.2 ,1]} />
-          <DevelopementCard2 scroll={scrollYProgress} background={"url(/development/bg-card-3.png)"} images={cardImages3} scrollY={[0.5 ,1]} />
+          <DevelopementCard2 name={"Web Design & Development"} desc={"Responsive Web Designs that Don’t Just Work—That Talk, Sell, and Impress! Score websites that are your brand’s digital handshake, blending striking visuals with seamless and intuitive performance."} scroll={scrollYProgress} background={"url(/development/bg-card-2.png)"} images={cardImages2} scrollY={[0.2 ,1]} />
+          <DevelopementCard2 name={"Web App Development"} desc={"Web App Development That Marry Style with Strategy for Maximum Impact! Get apps that are more than just tools—they’re tailored solutions engineered to streamline processes, boost efficiency, empower and accelerate your growth."} scroll={scrollYProgress} background={"url(/development/bg-card-3.png)"} images={cardImages3} scrollY={[0.5 ,1]} />
         </motion.div>
       </div>
       <motion.div
@@ -50,13 +50,10 @@ const DevelopmentComponent = () => {
               META MARTKETIERS BENEFITS
             </div>
             <h2 className="text-2xl xl:text-4xl bg-gradient-to-r from-purple-500 to-blue-500 bg-clip-text text-transparent font-bold text-center">
-              TRANSFORM YOUR STARTUPS DEVELOPMENT STRATEGY WITH META MARKETIERS
+            Majestic Web Development Services That Gets You Noticed Online
             </h2>
             <p className="text-white text-center mt-3 text-sm xl:text-base">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
-              molestiae doloribus explicabo cumque tempore, dolores eveniet
-              dignissimos et provident quasi incidunt magnam distinctio
-              repellendus, est non molestias, earum sit assumenda!
+            We Don’t Just Market, We Create Digital Magic That Takes Your Brand to the Next Level—Scroll Less, Sell More!
             </p>
           </div>
       </motion.div>
@@ -73,11 +70,10 @@ const DevelopementCard1 = ({ scroll }) => {
       
       <div className="flex flex-col justify-end items-start px-5 pb-5 xl:pb-16">
         <h3 className="text-neutral-200 font-bold text-2xl xl:text-4xl">
-          BRAnr AOUNR AOURN
+        Mobile App Development
         </h3>
-        <p className="text-neutral-200 text-sm xl:text-base">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ea,
-          ducimus nemo magni culpa libero.
+        <p className="text-neutral-200 text-sm max-w-[520px] xl:text-base">
+          Innovating Your Ideas into Sleek Mobile Experiences! From concept to launch, we craft mobile applications that are more than just functional—they’re an experience; bringing your vision to life, making every swipe and tap a delight!
         </p>
       </div>
       <div className="flex justify-center items-center ml-auto px-10 space-x-4">
@@ -95,24 +91,23 @@ const DevelopementCard1 = ({ scroll }) => {
     </div>
   );
 };
-const DevelopementCard2 = ({ scroll, background, images, scrollY }) => {
+const DevelopementCard2 = ({ name,desc,scroll, background, images, scrollY }) => {
   const y1 = useTransform(scroll, scrollY, [800, -600]);
   return (
     <div style={{backgroundImage: background}} className="h-[300px] xl:h-[500px] w-[700px] xl:w-[1000px] bg-purple-700 rounded-2xl flex overflow-clip">
        <div className="flex flex-col justify-end items-start px-5 pb-5 xl:pb-16">
         <h3 className="text-neutral-200 font-bold text-2xl xl:text-4xl">
-          BRAnr AOUNR AOURN
+          {name}
         </h3>
-        <p className="text-neutral-200 text-sm xl:text-base">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio ea,
-          ducimus nemo magni culpa libero.
+        <p className="text-neutral-200 text-sm max-w-[520px] xl:text-base">
+          {desc}
         </p>
       </div>
       <div className="flex justify-center items-center ml-auto px-10 gap-x-2">
         <motion.div className="flex flex-col gap-5" style={{ y: y1 }}>
           {images.map((image)=> {
             return(
-              <Image src={image} key={image} width={560} height={350} className="rounded-3xl" alt="image"/>
+              <Image priority src={image} key={image} width={560} height={350} className="rounded-3xl" alt="image"/>
             )
           })
 

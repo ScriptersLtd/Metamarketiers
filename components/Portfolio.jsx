@@ -61,15 +61,16 @@ const Portfolio = () => {
       <div className=" w-full  h-[1000px]  flex justify-center items-start">
         <div className="flex mx-auto flex-col gap-y-5">
           <div className="h-full absolute left-0 top-56 w-screen">
-            <PortfolioCard number={1} scale={scale1} opacity={opacity1} image={"/image_6.png"} />
+            <PortfolioCard tag1={"web"} tag2={"marketing"} tag3={"UI/UX"} heading={"Creating Visual Stories That Click"} desc={"For Jacob Gronberg, we delivered a visually stunning custom web design that blends sleek aesthetics with a user-friendly touch. Every element, from bold visuals to intuitive navigation, mirrors his daring artistic flair. It’s more than a website—it’s a digital art gallery that captures the essence of Jacob’s unique vision."}  scale={scale1} opacity={opacity1} image={"/image_6.png"} />
           </div>
           <div className="h-full absolute left-0 top-[900px] w-screen">
-            <PortfolioCard number={2} opacity={opacity2} scale={scale2} image={"/homeimg1.png"} />
+            <PortfolioCard tag1={"web"} tag2={"marketing"} tag3={"UI/UX"}heading={"Fueling Sales with Scroll-Stopping Campaigns"} desc={"Our digital branding services took a 50% off sneaker sale to the next level with attention-grabbing ads and fresh, relatable content. From catchy social media posts to irresistible promotions, we turned a simple discount into a buzz-worthy shopping frenzy that drove traffic and boosted conversions—because who can resist a great deal when it’s marketed just right?"} opacity={opacity2} scale={scale2} image={"/homeimg1.png"} />
           </div>
 
           <div className="h-full absolute left-0 top-[1500px] w-screen">
-            <PortfolioCard
-              number={3}
+            <PortfolioCard tag1={"web"}
+tag2={"marketing"} tag3={"UI/UX"}              heading={"Designing Digital Marketplaces That Sell "}
+              desc={"We revamped this e-commerce platform with a clean, intuitive design that highlights top products and simplifies shopping. From eye-catching product displays that scream ‘Buy me now!’ to a smooth checkout, we crafted an easy-to-navigate digital shopping experience that feels like personalized shopping—driving engagement and fueling sales with every click!"}
               y={y3}
               scale={scale3}
               opacity={opacity3}
@@ -77,7 +78,7 @@ const Portfolio = () => {
             />
           </div>
           <div className="h-full absolute left-0 top-[2500px] w-screen">
-            <PortfolioCard number={4} y={y4} opacity={opacity4} scale={scale4} image={"/homeimg2.png"} />
+            <PortfolioCard tag1={"web"} tag2={"marketing"} tag3={"UI/UX"}heading={"Branding That Powers Performance"} desc={"For the athlete-focused brand, we didn’t just build a page; we built a vibe! Our logo design company’s approach  infused the page with high-energy visuals and motivational messaging that reflect the brand’s core values. The result? A powerful connection with the audience that goes beyond products—it’s about embracing the athlete mindset!"} y={y4} opacity={opacity4} scale={scale4} image={"/homeimg2.png"} />
           </div>
         </div>
       </div>
@@ -85,40 +86,35 @@ const Portfolio = () => {
   );
 };
 
-const PortfolioCard = ({ classes, y, scale, opacity, number,image }) => {
+const PortfolioCard = ({ tag1,tag2,tag3,classes, y, scale, opacity,desc, heading,image }) => {
   return (
-    <div className={`sticky top-72  ${classes}`}>
+    <div className={`sticky top-52 md:top-72  ${classes}`}>
       <motion.div
         style={{
           y: y,
           scale: scale,
           opacity: opacity,
         }}
-        className="w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1100px] mx-auto backdrop-blur-lg bg-neutral-400/15 h-[420px]  p-5 rounded-xl flex flex-col justify-center gap-y-5"
+        className="w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1100px] mx-auto backdrop-blur-lg bg-neutral-400/15 h-[470px]  p-5 rounded-xl flex flex-col justify-center gap-y-5"
       >
         <div className=" sm:flex hidden gap-x-4 font-thin">
           <div className="border-[0.5px] text-neutral-100 text-xs border-neutral-400 rounded-full p-1 px-3">
-            WebDev
+            {tag1}
           </div>
           <div className="border-[0.5px] text-neutral-100 text-xs border-neutral-400 rounded-full p-1 px-3">
-            WebDesign
+            {tag2}
           </div>
           <div className="border-[0.5px] text-neutral-100 text-xs border-neutral-400 rounded-full p-1 px-3">
-            Social
+            {tag3}
           </div>
         </div>
         <div className="flex flex-col sm:flex-row gap-y-5 justify-between items-start">
           <div className="flex flex-col  gap-y-2 sm:gap-x-5">
             <span className="text-neutral-100 text-xl sm:text-2xl  font-semibold">
-              PORTFOLIO {number}
+              {heading}
             </span>
-            <span className="text-white text-xs sm:text-sm font-thin w-[250px] md:w-[300px] lg:w-[450px] ">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Aspernatur alias quisquam quo quos voluptas explicabo iste sed
-              veritatis Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Minima, nemo quod quis vitae, eum, harum culpa veritatis similique
-              natus eligendi saepe aspernatur molestiae fugit soluta suscipit.
-              Sint aspernatur blanditiis odio.{" "}
+            <span className="text-white text-xs sm:text-[16px] leading-6 opacity-65 w-[250px] md:w-[300px] lg:w-[450px] ">
+              {desc}
             </span>
           </div>
           <Image

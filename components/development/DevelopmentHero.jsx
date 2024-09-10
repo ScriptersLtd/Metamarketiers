@@ -12,7 +12,7 @@ const DevelopmentHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.2 }}
       >
-        isaidfu isadufn ybguywbd uaywbda ausyduysa uyas dyusa ysasy usi fu
+        Building Better, Faster, Smarter Websites That Captivate and Convert
       </motion.h1>
       <motion.p
         className="text-center text-neutral-100 max-w-4xl z-10 px-3"
@@ -20,11 +20,7 @@ const DevelopmentHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.3 }}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-        officia quaerat doloribus? Deserunt nesciunt ex placeat, sapiente, quas
-        omnis ipsum neque consequuntur inventore voluptate vero animi iure iste
-        quia possimus cumque tempore, asperiores sit fuga necessitatibus
-        suscipit doloribus aliquid nulla!
+       Websites that aren’t just pretty faces—ours are custom web development masterpieces designed to work hard for your brand, from attracting the right audience to closing the deal. Let’s create something that wows and wins!
       </motion.p>
       <motion.img
         src="/development/development-hero-1.png"
@@ -95,6 +91,7 @@ const DevelopmentHero = () => {
         initial={{ y: 250, opacity: 0, x: 0 }}
         animate={{ y: 0, opacity: 1, x: 0 }}
         transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 1 }}
+        priority
       />
       
     </div>

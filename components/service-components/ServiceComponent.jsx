@@ -17,10 +17,7 @@ const ServiceComponent = () => {
   );
   const shapeY = useTransform(scrollYProgress, [0, 1], [0, -100]);
   return (
-    <motion.div
-      ref={serviceRef}
-      className="w-full absolute bottom-0 z-20 "
-    >
+    <motion.div ref={serviceRef} className="w-full absolute bottom-0 z-20 ">
       <div className=" top-0 z-10 relative w-screen bg-gradient-to-b bg-neutral-950">
         <div className="h-full w-screen absolute z-0">
           <div className="sticky top-52 flex justify-center items-center">
@@ -92,101 +89,117 @@ const ServiceComponent = () => {
               width={140}
               className="object-contain absolute top-[60px] left-[100px] z-0"
             />
-
-
           </motion.div>
         </div>
         <motion.div className="flex flex-col justify-center items-center lg:h-[300px] px-3">
-          <p className=" text-4xl lg:text-6xl text-center lg:text-left font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-700 h-[90px] lg:h-[70px] to-blue-500 w-fit z-10">
-            Digital Marketing Services
-          </p>
+          <h className=" text-4xl lg:text-6xl text-center lg:text-left font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-700 h-[150px] lg:h-[70px] to-blue-500 w-fit z-10">
+            Digital Marketing Services for Market Domination
+          </h>
           <p className="text-white z-10 text-center  lg:text-left">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            repudiandae asperiores itaque, omnis molestias doloribus incidunt
-            nisi
+            Your Brand’s New Best Friend in the Digital World, Guiding You from
+            Zero to Hero.
           </p>
         </motion.div>
 
         <div className="flex flex-col justify-center items-center gap-y-10 py-24 z-10">
           <Services
-          img={"/marketing-service-1.png"}
-            heading={<>Lorem ipsum dolor sit amet consectetur.</>}
+            img={"/marketing-service-1.png"}
+            heading={<>Social Media Marketing</>}
             desc1={
               <>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                ipsam, consectetur molestiae, similique non minima porro
-                inventore doloribus vitae qui laboriosam officia accusamus
-                libero sequi neque, ducimus et corporis! Similique fugiat totam
-                eius dignissimos alias aliquam quia numquam quis exercitationem?
+                Are you tired of shouting into the social media void, hoping
+                someone will finally hear you? Let’s face it; it’s a jungle out
+                there. With algorithms changing faster than you can say
+                “trending,” it’s no wonder that reaching your audience feels
+                like a never-ending battle. But that’s where our life-saving
+                social media marketing services come in. Our talented team
+                doesn’t just post pretty pictures; we craft strategic campaigns
+                designed to boost engagement, increase brand awareness, and
+                drive exceptional results. Whether it’s Instagram, Facebook,
+                LinkedIn, or TikTok, our tailored approach ensures your brand
+                voice is consistent and compelling across every channel.
               </>
             }
             desc2={
               <>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ea
-                esse amet eius. Architecto voluptatem assumenda quibusdam nemo
-                libero? Odit aspernatur dolor unde voluptatum eius iste id
-                ducimus itaque eum facere animi, eaque accusamus impedit dolorum
-                vero debitis excepturi ipsa nihil necessitatibus atque
-                consectetur rerum iusto minus. Earum, hic ut.
+                From crafting scroll-stopping posts to running ad campaigns that
+                actually convert, you’ll build connections that turn casual
+                scrollers into loyal followers. Ready to turn your social media
+                presence into a powerful marketing tool? Our precision-driven
+                digital and social media marketing will help you stay ahead of
+                the trends and ensure your brand never gets lost in the noise.
+                Let’s connect, engage, and grow together—because your success on
+                social media starts here!
               </>
             }
           />
           <Services
-          img={"/marketing-service-3.png"}
-
-            heading={<>Lorem ipsum dolor sit amet consectetur.</>}
+            img={"/marketing-service-3.png"}
+            heading={<>Content Marketing Services</>}
             desc1={
               <>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                ipsam, consectetur molestiae, similique non minima porro
-                inventore doloribus vitae qui laboriosam officia accusamus
-                libero sequi neque, ducimus et corporis! Similique fugiat totam
-                eius dignissimos alias aliquam quia numquam quis exercitationem?
+                Ever feel like your content is just… there? Not anymore. In the
+                world of digital marketing, content is king, but not just any
+                content—it has to be strategic, engaging, and tailored to your
+                audience’s needs. That’s why our content marketing experts focus
+                on creating a mix of blogs, articles, and guides that not only
+                captivate but convert. By integrating relevant topics,
+                storytelling, and SEO best practices, we help your brand speak
+                directly to your audience, building trust and authority that
+                keeps them coming back for more.
               </>
             }
             desc2={
               <>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ea
-                esse amet eius. Architecto voluptatem assumenda quibusdam nemo
-                libero? Odit aspernatur dolor unde voluptatum eius iste id
-                ducimus itaque eum facere animi, eaque accusamus impedit dolorum
-                vero debitis excepturi ipsa nihil necessitatibus atque
-                consectetur rerum iusto minus. Earum, hic ut.
+                Our team knows how to blend creativity with content marketing
+                strategy, ensuring every word works to drive traffic, boost your
+                online presence, and turn readers into raving fans. Whether it’s
+                educational content, thought leadership pieces, or value-packed
+                newsletters, we’ve got the magic touch to make your message
+                stick. Ready to elevate your content game? Let’s transform your
+                ideas into impactful narratives that resonate, engage, and
+                generate results!
               </>
             }
           />
           <Services
-          img={"/marketing-service-2.png"}
-
-            heading={<>Lorem ipsum dolor sit amet consectetur.</>}
+            img={"/marketing-service-2.png"}
+            heading={<>SEO Services</>}
             desc1={
               <>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
-                ipsam, consectetur molestiae, similique non minima porro
-                inventore doloribus vitae qui laboriosam officia accusamus
-                libero sequi neque, ducimus et corporis! Similique fugiat totam
-                eius dignissimos alias aliquam quia numquam quis exercitationem?
+                Ever wonder why your competitors always seem to show up first on
+                Google? It’s not magic—it’s SEO done right. Our leading SEO
+                agency goes beyond just sprinkling keywords; we delve into
+                technical SEO, on-page optimization, and link-building
+                strategies to ensure your website not only ranks higher but
+                performs better. We conduct thorough keyword research,
+                competitor analysis, and content optimization to align with
+                search engine algorithms, helping you capture more organic
+                traffic and outperform your rivals.
               </>
             }
             desc2={
               <>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae ea
-                esse amet eius. Architecto voluptatem assumenda quibusdam nemo
-                libero? Odit aspernatur dolor unde voluptatum eius iste id
-                ducimus itaque eum facere animi, eaque accusamus impedit dolorum
-                vero debitis excepturi ipsa nihil necessitatibus atque
-                consectetur rerum iusto minus. Earum, hic ut.
+                With our expertise, your website won’t just climb the
+                rankings—it’ll dominate the search results. From meta
+                descriptions that catch the eye to backlinks that build
+                credibility, top-in-class SEO experts will ensure every aspect
+                of your online presence is optimized to attract and convert. So,
+                if you’re ready to turn your website into a lead-generating
+                machine, let’s boost your visibility, improve user experience,
+                and get you noticed on the digital landscape where it matters
+                most and fast!
               </>
             }
           />
         </div>
       </div>
-      <Footer />
+      <Footer line1={"Time to Make Your Business the Talk of the Timeline, Trending for All the Right Reasons with Digital and Social Media Marketing that Roars!"} heading={"Feeling Invisible Online? Let’s Fix That Now and Get Your Brand the Spotlight It Deserves!"} button={"START YOUR JOURNEY"} />
     </motion.div>
   );
 };
 
-const Services = ({ heading, desc1, desc2,img }) => {
+const Services = ({ heading, desc1, desc2, img }) => {
   const serviceCardRef = useRef(null);
   const isInView = useInView(serviceCardRef, { once: true });
   return (
@@ -216,13 +229,13 @@ const Services = ({ heading, desc1, desc2,img }) => {
         }}
       >
         <div className="flex flex-col justify-start items-start p-3 lg:p-7">
-          <p className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 pb-5">
+          <h3 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-blue-600 pb-5">
             {heading}
-          </p>
-          <p className="text-neutral-100 pb-4 font-extralight text-sm md:text-base ">
+          </h3>
+          <p className="text-neutral-100 pb-4 font-extralight text-sm">
             {desc1}
           </p>
-          <p className="text-neutral-100 pb-4 font-extralight text-sm md:text-base">
+          <p className="text-neutral-100 pb-4 font-extralight text-sm">
             {desc2}
           </p>
         </div>

@@ -4,12 +4,8 @@ import {
   stagger,
   useAnimate,
   useInView,
-  useScroll,
-  useTransform,
 } from "framer-motion";
-import { useEffect, useRef } from "react";
-import Footer from "../Footer";
-import { useState } from "react";
+import { useEffect } from "react";
 
 const AboutBody = () => {
   function useTaglineAnimation() {
@@ -22,8 +18,7 @@ const AboutBody = () => {
           { opacity: 1, y: 0 },
           {
             duration: 0.55,
-            delay: stagger(0.08, {startDelay: 0.2}),
-
+            delay: stagger(0.08, { startDelay: 0.2 }),
           }
         );
     }, [isInView]);
@@ -31,22 +26,32 @@ const AboutBody = () => {
     return scope;
   }
   const scope = useTaglineAnimation();
-  const [isHover, setIsHover] = useState(false);
   return (
     <>
       <div className="bg-neutral-950 w-full h-[3100px] md:h-[3500px]  flex justify-center relative">
         <motion.div className="p-4 xl:p-20 w-[100vw] backdrop-blur-xl bg-neutral-600/10 rounded-[100px] z-10 flex flex-col mx-auto absolute -mt-52 mb-[100px]">
-          <div className="pb-[250px] md:pb-[500px] mt-20">
-            <h2 className="text-5xl md:text-7xl text-transparent text-center md:text-left  bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500 w-fit font-bold pb-4">
-              Few Things About Us
+          <div className="pb-[250px] md:pb-[400px] mt-20">
+            <h2 className="text-5xl md:text-7xl text-transparent text-center md:text-left  bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 w-fit font-bold pb-4">
+              We’re a Design, Marketing, and Strategic Development Company!
             </h2>
-            <p className="text-xl md:text-4xl text-neutral-100 mt-10 md:tracking-wide md:leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe
-              officiis debitis nostrum eveniet architecto quod illo corrupti
-              velit sapiente alias, in quos, pariatur neque id molestias magni.
-              Quae ad distinctio fugiat similique quia vero quisquam deleniti
-              dolorem, cupiditate, molestiae consequatur quam delectus aliquid
-              atque repudiandae eum sed. Earum, eligendi illum!
+            <p className="text-xl md:text-2xl text-neutral-100 mt-10 md:tracking-wide md:leading-relaxed max-w-6xl">
+              Welcome to Aiosols, where marketing meets innovation and
+              creativity thrives! We are not just another marketing agency—we
+              are your strategic partners in turning brand visions into
+              realities. With a blend of cutting-edge technology, creative
+              expertise, and a deep understanding of market trends, we empower
+              businesses to stand out in a noisy world.
+            </p>
+            <p className="text-xl md:text-2xl text-neutral-100 mt-10 md:tracking-wide md:leading-relaxed max-w-6xl">
+              From web design and development to digital marketing and branding,
+              we’re the magicians behind the scenes setting your brand apart
+              from the rest. Our approach is simple yet powerful: we listen, we
+              strategize, and we create—ensuring every campaign is tailored to
+              your unique goals.
+            </p>
+            <p className="text-xl md:text-2xl text-neutral-100 mt-10 md:tracking-wide md:leading-relaxed max-w-6xl">
+              Your success is our success, and we’re here to fuel your growth,
+              one brilliant idea at a time!
             </p>
           </div>
           <div className="flex flex-col md:flex-row justify-start items-center md:px-4 text-neutral-100 relative pb-[250px] md:pb-[500px]">
@@ -54,11 +59,15 @@ const AboutBody = () => {
               OUR EXPERIENCE
             </div>
             <div className="text-[20vw] font-bold  md:ml-44">12+</div>
-            <div className="text-xl  md:text-[2vw] font-light flex items-center leading-relaxed md:ml-4 xl:ml-20">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum
-              sint tenetur sequi. Laboriosam exercitationem necessitatibus
-              voluptas provident molestias officia, eligendi, dignissimos
-              impedit veniam ex
+            <div className="flex flex-col">
+            <div className="text-xl  md:text-2xl font-light flex items-center leading-relaxed md:ml-4 xl:ml-20 mb-10">
+            Over decade-long years of experience in the dynamic world of marketing, we’ve seen it all and done it all. We’ve helped startups find their voice, guided established brands through rebranding journeys, and navigated the ever-evolving digital landscape with finesse. Our rich history is a testament to our commitment to staying ahead of the curve and delivering results that matter.
+
+            </div>
+            <div className="text-xl  md:text-2xl font-light flex items-center leading-relaxed md:ml-4 xl:ml-20">
+            Each project we take on is approached with the same enthusiasm and dedication, leveraging our extensive experience to drive measurable success. Whether it’s crafting a compelling brand story or optimizing your online presence, you can trust us to bring the best of our expertise to every challenge! 
+
+            </div>
             </div>
           </div>
 
@@ -90,11 +99,15 @@ const AboutBody = () => {
         </motion.div>
         <div className="absolute h-screen w-screen flex justify-center items-center bottom-0">
           <motion.div
-            onMouseEnter={() => setIsHover(true)}
-            onMouseLeave = {()=> setIsHover(false)}            
-            className="text-3xl md:text-6xl text-neutral-100 font-bold z-10 flex gap-x-3"
+            className="text-3xl md:text-6xl text-neutral-100 font-bold z-10 text-center "
           >
-            Start A Project? <motion.div animate={isHover ? {rotateX:360} : {rotateX:0}} transition={{ duration: 1, ease:"easeInOut" }}>Lets Talk</motion.div>
+           Ready to Kick Off Your Project? 
+
+            <motion.span
+               className="ml-3 underline underline-offset-8 "
+            >
+              Let’s Chat!
+            </motion.span>
           </motion.div>
         </div>
       </div>

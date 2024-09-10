@@ -11,7 +11,7 @@ const DesignHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.2 }}
       >
-        isaidfu isadufn ybguywbd uaywbda ausyduysa uyas dyusa ysasy usi fu
+       Turning Clicks into Customers with Web Design Agency That Make Your Brand Unforgettable
       </motion.h1>
       <motion.p
         className="text-center text-neutral-100 max-w-4xl z-10 px-3"
@@ -19,11 +19,8 @@ const DesignHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.3 }}
       >
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Placeat
-        officia quaerat doloribus? Deserunt nesciunt ex placeat, sapiente, quas
-        omnis ipsum neque consequuntur inventore voluptate vero animi iure iste
-        quia possimus cumque tempore, asperiores sit fuga necessitatibus
-        suscipit doloribus aliquid nulla!
+        “From Concept to Creation, We Build a Digital Experience That’s As Dynamic and Engaging as Your Business.”
+
       </motion.p>
       <motion.img
         src="/design-img-2.png"

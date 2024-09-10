@@ -35,10 +35,10 @@ const TypesofBranding = () => {
           className="sticky top-32 flex w-[2000px]  justify-center items-center gap-5
         xl:gap-10 z-10"
         >
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype1.jpg"} />
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype2.jpg"} />
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype3.jpg"} />
-          <TypeCard isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype4.jpg"} />
+          <TypeCard type={"Packaging Branding"} desc={"Branding and packaging are the pulse of your product, grabbing attention and ensuring your brand feels alive. Our approach makes your product stand out with power, purpose, and a punch of personality."} isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype1.jpg"} />
+          <TypeCard type={"Product Branding"} desc={"Our product branding strategy and logo design turn your brand into a larger-than-life experience. We’ll make your product a powerful declaration of your brand's identity; unforgettable and traffic-stopping, just like a bold billboard."}   isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype2.jpg"} />
+          <TypeCard type={"Corporate Branding"} desc={"Corporate branding services unify your brand’s presence, creating scroll-stopping designs that deeply resonate. Let’s build communities and drive engagement, making your brand a show-stopper in the corporate world!"} isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype3.jpg"} />
+          <TypeCard type={"Digital Branding"} desc={"Digital branding services make your brand more than pixels on screen—it's a lifestyle. We design logos and identities that move, inspire and captivate, making your online presence irresistible and impressive."} isBigScreen={isBigScreen} isSmallScreen={isSmallScreen} imgsrc={"/brandingtype4.jpg"} />
          
         </motion.div>
       </div>
@@ -46,7 +46,7 @@ const TypesofBranding = () => {
   );
 };
 
-const TypeCard = ({isBigScreen, isSmallScreen,imgsrc}) => {
+const TypeCard = ({type,desc,isBigScreen, isSmallScreen,imgsrc}) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
   return (
@@ -64,11 +64,10 @@ const TypeCard = ({isBigScreen, isSmallScreen,imgsrc}) => {
         className="h-[500px]  w-[500px]  rounded-sm object-cover z-10"
         alt="branding type"
       />
-      <div className="absolute bottom-[25%] left-5 lg:bottom-5 text-neutral-200 z-0">
-        <p className="text-xl">Branding Type</p>
-        <p className="hidden lg:block text-xs sm:text-sm">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rerum
-          tempore adipisci voluptatem possimus autem magni velit{" "}
+      <div className="absolute  bottom-5 left-5  text-neutral-200 z-0">
+        <p className="text-xl">{type}</p>
+        <p className=" text-xs sm:text-sm">
+          {desc}
         </p>
       </div>
     </div>

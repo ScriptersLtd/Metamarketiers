@@ -75,12 +75,10 @@ const Tools = () => {
           image={"/figma.png"}
           height={120}
           width={170}
-          heading={"Introduction"}
+          heading={" Design with Precision and Creativity"}
           desc={
             <>
-              The introduction sets the stage for your dissertation, effectively
-              presenting the research question, outlining objectives, and
-              elucidating the study&#39;s purpose. Crafted 
+              We leverage Figma to bring your ideas to life, crafting intuitive and eye-catching designs that resonate with your brand’s identity. Our collaborative approach ensures every detail is perfected before development, making the design process smooth and engaging for our clients. 
             </>
           }
         />
@@ -89,41 +87,35 @@ const Tools = () => {
           image={"/analytics.png"}
           height={120}
           width={170}
-          heading={"Literature Review"}
+          heading={"Evidence-Based Choices"}
           desc={
             <>
-              Our dissertation literature review help UK experts explore the existing scholarly works relevant to your topic, critically
-              evaluating and synthesising the available literature. This chapter
+              Understanding your audience is key, and that’s where our Analytics expertise comes into play. We dive deep into data to uncover insights that drive strategic decisions, optimize campaigns, and ensure your brand connects with the right people at the right time.
              
             </>
           }
         />
         <Card
           id={"card3"}
-          heading={"Methodology"}
+          heading={"High-Performance Web Development"}
           image={"/nextjs.png"}
           height={120}
           width={170}
           desc={
             <>
-              The methodology chapter frames the research model, data mining
-              strategies, and analytical outlook employed in your paper. Our
-              dissertation writing help professionals ensure transparency and
-              coherence in
+              With Next.js, we build fast, SEO-friendly websites that not only look great but perform exceptionally well. Our use of this cutting-edge framework ensures that your site is scalable, efficient, and ready to meet the demands of your growing business.
             </>
           }
         />
         <Card
           id={"card4"}
-          heading={"Findings/Results"}
+          heading={"Visibility Upgrade"}
           image={"/adsense.png"}
           height={120}
           width={170}
           desc={
             <>
-              The findings/results chapter presents a coherent and clear
-              overview of the data collected, revealing the outcomes of your
-              research. Our dissertation help UK experts 
+              We harness Google Search Console to monitor, optimize, and enhance your site’s search presence. From keyword tracking to performance reports, we ensure your site is always ahead in the search game, driving organic traffic and boosting your online visibility.
             </>
           }
         />
@@ -132,11 +124,10 @@ const Tools = () => {
           image={"/shopify.png"}
           height={120}
           width={170}
-          heading={"Discussion"}
+          heading={"E-Commerce Excellence"}
           desc={
             <>
-              The discussion chapter interprets the findings in the context of
-              your research question, linking them back to the literature and
+              Selling online? Shopify is our go-to for creating stunning, customer-centric online stores. We customize your Shopify experience to match your brand’s needs, ensuring a smooth shopping experience that keeps customers coming back for more!
    
             </>
           }
@@ -146,12 +137,10 @@ const Tools = () => {
           image={"/wordpress.png"}
           height={120}
           width={170}
-          heading={"Additional Chapters"}
+          heading={"Flexible Content Management"}
           desc={
             <>
-              Beyond the core chapters, we, as genuine dissertation assistance
-              providers, also address essential subsidiary elements. The
-              abstract briefly summarises your entire 
+              For businesses that need dynamic, customizable websites, affordable web development services utilize WordPress to deliver flexibility and functionality. Our tailored solutions make managing your content easy, allowing you to focus on what matters most—growing your brand!
             </>
           }
         />
@@ -160,12 +149,11 @@ const Tools = () => {
           image={"/javascript.png"}
           height={120}
           width={170}
-          heading={"Conclusion"}
+          heading={"Interactive and Engaging Experiences"}
           desc={
             <>
-              The conclusion chapter consolidates the main findings and restates
-              the scope of your study. Additionally, it offers a precise
-              recapitulation of your dissertation&#39;s 
+             JavaScript is the backbone of interactivity on the web, and we use it to add engaging elements to your website. From smooth animations to dynamic content, our JS expertise ensures your web application is not just a static page but an immersive experience!
+
             </>
           }
         />

@@ -4,8 +4,9 @@ import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useMediaQuery } from "react-responsive";
+import ServiceComponent from "../service-components/ServiceComponent";
 
-export default function Journey() {
+export default function MarketingJourney() {
   const containerRef = useRef(null);
   const pathRef = useRef(null);
 
@@ -41,7 +42,7 @@ export default function Journey() {
   }, [y]);
 
   return (
-    <div className="h-[800px] lg:h-[3500px] py-24 lg:py-0 relative justify-center items-center flex  bg-neutral-950 overflow-clip">
+    <div className="h-[3700px] lg:h-[6000px] py-24 lg:py-0 relative justify-center items-center flex  bg-neutral-950 overflow-clip">
       <div className="absolute h-full top-10 lg:top-0 z-0">
         <motion.div
           className="lg:sticky lg:bottom-0 flex justify-center  lg:h-[4500px] pt-4"
@@ -103,14 +104,15 @@ export default function Journey() {
               style={{ x: isBigScreen ? x : 0 }}
               className="lg:absolute lg:top-96  flex flex-col lg:flex-row gap-x-5 overflow-hidden w-[320px] md:w-auto mx-auto py-10"
             >
-              <Step heading={"How We Do It?"} desc={<>Uncover, analyze, and execute. From design to branding, every move is a masterstroke of strategy.</>}/>
-              <Step heading={"What We Do?"} desc={<>More than marketing—we spark movements, fuel visibility, and turn audiences into brand believers!</>}/>
-              <Step heading={"Why Choose Us?"} desc={<>Results-driven rebels with a cause: your growth! Bringing the hustle, heart, and vision needed to keep you winning.
-                </>} />
+              <Step heading={"Our Approach"} desc={<>Tailored strategies that truly connect—because your brand deserves standout solutions!</>}/>
+              <Step heading={"Our Expertise"} desc={<>Leading with top-tier tools and insights—because your growth deserves the best!</>}/>
+              <Step heading={"Our Commitment"} desc={<>Transparent, collaborative, and always in sync—because your goals are our priority!</>} />
             </motion.div>
           </div>
         </motion.div>
       </div>
+      <ServiceComponent />
+
     </div>
   );
 }

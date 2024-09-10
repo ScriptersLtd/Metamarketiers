@@ -129,14 +129,14 @@ const Hero = () => {
             />
           )}
           <motion.div className="flex flex-col justify-center items-center max-w-[1200px] relative z-10">
-            <div className=" w-[350px] md:w-[500px] z-30">
+            <div className=" w-[250px] md:w-[300px] z-30">
               {onLogoAnimationgComplete && (
                 <motion.img
                   src={"/logo.png"}
                   width={500}
                   height={300}
                   alt="logo"
-                  className="z-30 w-[350px] md:w-[500px]  "
+                  className="z-30 w-[250px] md:w-[300px]  "
                   transition={{
                     duration: 1,
                     ease: "easeInOut",
@@ -153,18 +153,11 @@ const Hero = () => {
                 className="mt-10 flex flex-col justify-center items-center px-3 z-50"
               >
                 <motion.h1 className=" font-semibold text-center text-neutral-100  text-3xl xl:text-4xl 2xl:text-5xl pb-6 leading-tight flex flex-col max-w-4xl z-50">
-                  <motion.span initial={{ opacity: 0, y: 80 }} >isaidfu isadufn ybguywbd uaywbda ausyduysa
-                   uyas dyusa ysasy usi fu</motion.span>
+                  <motion.span initial={{ opacity: 0, y: 80 }} >Magnifying Your Digital Impact with Majestic Web Design and Development Agency</motion.span>
                 </motion.h1>
                 <p className=" text-center text-neutral-200 text-base md:text-lg flex flex-col z-50 ">
                   <motion.span initial={{ opacity: 0, y: 80 }}>
-                    n aisnfi nsfidu nsidf naisoune iofunsiefnai fneinse
-                    fpiansepfi nsepiunsf fuj asdf fwq iubpiu ompoi
-                    {" "}
-                    pisaeuf paishefpiusafpi abnse pibsaefi ae iuhs piuas pius
-                    fpisefiuh{" "}
-                    isahdfi safo ibsafe ioabef iobwaef iwafei bwa fiaef awfi
-                    biweofb iwaofb
+                  “From picking the perfect name to your grand digital debut, maximize your digital dreams into dynamic realities, where creativity sparks connections and innovation ignites possibilities.”
                   </motion.span>
                 </p>
               </motion.div>
