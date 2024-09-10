@@ -1,5 +1,6 @@
 import { LocateIcon, MailIcon, PhoneIcon } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Footer = ({line1,heading,button}) => {
@@ -52,15 +53,21 @@ const Footer = ({line1,heading,button}) => {
             <PhoneIcon />
             <p>+92 300 0000000</p>
           </div>
-          {/* <div className="flex gap-4">
-            <p>bia bnifau fia</p>
-          </div> */}
-          <div className="flex gap-x-2 mt-6 lg:mt-auto">
-            <div className="w-8 h-8 bg-white rounded-md"></div>
-            <div className="w-8 h-8 bg-white rounded-md"></div>
-            <div className="w-8 h-8 bg-white rounded-md"></div>
-            <div className="w-8 h-8 bg-white rounded-md"></div>
-          </div>
+         
+          <div className="flex gap-x-4 mt-6 lg:mt-2">
+          <Link href="https://www.facebook.com/aiosols" target="_blank" rel="noopener noreferrer">
+            <Image src="/icon-facebook.png" width={32} height={32} alt="Facebook" />
+          </Link>
+          <Link href="https://www.instagram.com/aiosolsofficial" target="_blank" rel="noopener noreferrer">
+            <Image src="/icon-instagram.png" width={32} height={32} alt="Instagram" />
+          </Link>
+          <Link href="https://x.com/aiosols" target="_blank" rel="noopener noreferrer">
+            <Image src="/icon-twitter.png" width={32} height={32} alt="X" />
+          </Link>
+          <Link href="https://www.linkedin.com/company/aiosols/" target="_blank" rel="noopener noreferrer">
+            <Image src="/icon-linkedin.png" width={32} height={32} alt="LinkedIn" />
+          </Link>
+        </div>
         </div>
         </div>
     </div>

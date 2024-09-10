@@ -62,14 +62,16 @@ export const MenuItem = ({ text,href,setisOpen }) => {
   );
 };
 
-export const SocialMenuItem = ({ text }) => {
+export const SocialMenuItem = ({ text,href }) => {
   return (
+    <Link href={href} target="_blank" rel="noopener noreferrer">
     <motion.li
       className="flex flex-col menu-item h-[20%] overflow-hidden group mb-2 cursor-pointer"
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
       variants={socialVariants}
     >
+
       <span className="text-[30px] font-bold text-neutral-200 group-hover:-translate-y-[100%] transition-all duration-300 h-fit w-fit flex items-center gap-x-3">
         {text}
         <ExternalLink />
@@ -79,5 +81,6 @@ export const SocialMenuItem = ({ text }) => {
         <ExternalLink />
       </span>
     </motion.li>
+    </Link>
   );
 };

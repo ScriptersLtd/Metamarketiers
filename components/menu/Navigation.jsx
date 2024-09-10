@@ -75,12 +75,17 @@ export const SocialNavigation = ({isOpen}) => {
       className="absolute bottom-0 right-10 h-[30vh]"
       style={{ display }}
     >
-      {socials.map((i) => (
-        <SocialMenuItem key={i} text={i} />
+      {socials.map((social) => (
+        <SocialMenuItem key={social.name} text={social.name} href={social.url} />
       ))}
     </motion.ul>
   );
 };
 
-const socials = ["INSTAGRAM", "FACEBOOK", "PINTEREST", "LINKEDIN"];
+const socials = [
+  { name: "INSTAGRAM", url: "https://www.instagram.com/aiosolsofficial" },
+  { name: "FACEBOOK", url: "https://www.facebook.com/aiosols" },
+  { name: "X", url: "https://x.com/aiosols" },
+  { name: "LINKEDIN", url: "https://www.linkedin.com/company/aiosols/" }
+];
 const itemIds = [{name:"HOME", href:"/"}, {name:"SERVICES", href:"/services"}, {name:"ABOUT US", href:"/aboutus"}, {name:"CONTACT",href:"#"}];
