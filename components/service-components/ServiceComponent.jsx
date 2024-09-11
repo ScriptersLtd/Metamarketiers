@@ -17,7 +17,7 @@ const ServiceComponent = () => {
   );
   const shapeY = useTransform(scrollYProgress, [0, 1], [0, -100]);
   return (
-    <motion.div ref={serviceRef} className="w-full absolute bottom-0 z-20 ">
+    <motion.div ref={serviceRef} className="w-full absolute bottom-0 z-20">
       <div className=" top-0 z-10 relative w-screen bg-gradient-to-b bg-neutral-950">
         <div className="h-full w-screen absolute z-0">
           <div className="sticky top-52 flex justify-center items-center">
