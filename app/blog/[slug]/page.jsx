@@ -1,20 +1,20 @@
 import getBlogMetadata from "@/constants/getBlogMetadata";
 import { blogData } from "@/constants";
-import notFound from "next/navigation"
+import { notFound } from "next/navigation";
 import Image from "next/image";
 const getBlogContent = async (slug) => {
   const blogJson = blogData.find((blog) => blog.slug === slug);
   if (!blogJson) {
-    return notFound();
+    notFound();
   } else {
     try {
       const { slug } = blogJson;
-      const Mymodule = await import(`../../../blogcontent/${slug}`);
+      const Mymodule = await import(`../../../blog/${slug}`);
       const ContentComponent = Mymodule.default;
       return <ContentComponent />;
     } catch (error) {
       console.log(error);
-      return notFound();
+      notFound();
     }
   }
 };
