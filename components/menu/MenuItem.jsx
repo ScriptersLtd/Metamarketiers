@@ -50,12 +50,12 @@ export const MenuItem = ({ text,href,setisOpen }) => {
       variants={variants}
       whileHover={{ scale: 1.03 }}
       whileTap={{ scale: 0.97 }}
-      className=" flex items-center cursor-pointer flex-col h-[19%] sm:h-[25%] menu-item overflow-hidden group w-fit  my-3"
+      className=" flex items-center cursor-pointer flex-col h-[15%] sm:h-[17%]  menu-item overflow-hidden group w-fit  my-3"
     >
-      <Link onClick={() => setisOpen(false)} href={href}  className=" text-center text-[15vw] sm:text-[10vw] xl:text-[8vw] 2xl:text-[7vw] font-bold text-white group-hover:-translate-y-[100%] transition-all duration-300 h-fit w-fit">
+      <Link onClick={() => setisOpen(false)} href={href}  className=" text-center text-[12vw] sm:text-[7vw] xl:text-[6vw] 2xl:text-[5vw] font-bold text-white group-hover:-translate-y-[100%] transition-all duration-300 h-fit w-fit">
         {text}
       </Link>
-      <Link onClick={() => setisOpen(false)} href={href} className="text-center text-[15vw] sm:text-[10vw] xl:text-[8vw] 2xl:text-[7vw] font-bold text-white group-hover:-translate-y-[100%] transition-all duration-300 h-fit w-fit">
+      <Link onClick={() => setisOpen(false)} href={href} className="text-center text-[12vw] sm:text-[7vw] xl:text-[6vw] 2xl:text-[5vw] font-bold text-white group-hover:-translate-y-[100%] transition-all duration-300 h-fit w-fit">
         {text}
       </Link>
     </motion.li>

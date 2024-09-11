@@ -28,7 +28,7 @@ const AboutBody = () => {
   const scope = useTaglineAnimation();
   return (
     <>
-      <div className="bg-neutral-950 w-full h-[3100px] md:h-[3500px]  flex justify-center relative">
+      <div className="bg-neutral-950 w-full h-[3500px] md:h-[3500px]  flex justify-center relative">
         <motion.div className="p-4 xl:p-20 w-[100vw] backdrop-blur-xl bg-neutral-600/10 rounded-[100px] z-10 flex flex-col mx-auto absolute -mt-52 mb-[100px]">
           <div className="pb-[250px] md:pb-[400px] mt-20">
             <h2 className="text-5xl md:text-7xl text-transparent text-center md:text-left  bg-clip-text bg-gradient-to-r from-blue-300 to-purple-300 w-fit font-bold pb-4">
@@ -99,7 +99,7 @@ const AboutBody = () => {
         </motion.div>
         <div className="absolute h-screen w-screen flex justify-center items-center bottom-0">
           <motion.div
-            className="text-3xl md:text-6xl text-neutral-100 font-bold z-10 text-center "
+            className="text-3xl md:text-6xl text-neutral-100 font-bold z-10 text-center"
           >
            Ready to Kick Off Your Project? 
 

@@ -36,7 +36,7 @@ const AboutBall = () => {
   );
   return (
     <div
-      className="ball mx-auto h-[3700px] md:h-[4000px] absolute w-screen top-[100px] md:top-[500px] z-10 bg-neutral-950 "
+      className="ball mx-auto h-[4100px] md:h-[4000px] absolute w-screen top-[100px] md:top-[500px] z-10 bg-neutral-950 "
       ref={ref}
     >
       <motion.div

@@ -47,7 +47,7 @@ export const Navigation = ({ isOpen,setisOpen }) => {
   return (
     <motion.ul
       variants={variants}
-      className="absolute top-0  p-8 h-[70vh] lg:h-[100vh]"
+      className="absolute top-0 h-[70vh] md:h-[80vh] lg:h-[100vh] pl-4"
       style={{ display }}
     >
       {itemIds.map((i) => (
@@ -88,4 +88,4 @@ const socials = [
   { name: "X", url: "https://x.com/aiosols" },
   { name: "LINKEDIN", url: "https://www.linkedin.com/company/aiosols/" }
 ];
-const itemIds = [{name:"HOME", href:"/"}, {name:"SERVICES", href:"/services"}, {name:"ABOUT US", href:"/aboutus"}, {name:"CONTACT",href:"/contact"}];
+const itemIds = [{name:"HOME", href:"/"}, {name:"SERVICES", href:"/services"}, {name:"BLOGS", href:"/blog"}, {name:"ABOUT US", href:"/aboutus"}, {name:"CONTACT",href:"/contact"}];
