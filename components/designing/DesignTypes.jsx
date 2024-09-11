@@ -74,7 +74,7 @@ const DesignTypes = () => {
   console.log(inView);
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="h-auto xl:h-[5100px] relative pt-10 bg-neutral-950">
+    <div className="h-[2000px]  xl:h-[5100px] relative pt-10 bg-neutral-950">
       <div
         ref={containerRef}
         className="h-[3500px]  xl:h-[5000px] bg-neutral-950 relative flex justify-center overflow-clip z-10"

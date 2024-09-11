@@ -73,7 +73,7 @@ const Contact = () => {
   }
   return (
     <>
-    <div className="flex flex-col justify-center items-center bg-neutral-950 min-h-screen z-50 ">
+    <div className="flex flex-col justify-center items-center bg-neutral-950 min-h-screen">
       <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-purple-500 to-blue-500 font-bold text-6xl sm:text-7xl md:text-8xl mt-24 text-center">
         CONTACT US
       </h1>
@@ -81,7 +81,7 @@ const Contact = () => {
         <div className="top-52 right-[500px] h-[350px] w-[650px]  rounded-[220px] mix-blend-normal bg-purple-600 opacity-15 blur-3xl"></div>
         <div className="top-52 left-[300px] h-[600px] w-[600px] rounded-[220px] bg-blue-600 mix-blend-normal opacity-15 blur-3xl"></div>
       </div>
-      <div className="rounded-xl backdrop-blur-lg p-5 bg-neutral-6  00/20 mt-12 max-w-6xl w-full select-none">
+      <div className="rounded-xl backdrop-blur-lg p-5 bg-neutral-6  00/20 mt-12 max-w-6xl w-full select-none ">
         <form action="" onSubmit={onSubmit} className="flex flex-col gap-y-4 justify-center items-center">
           <input
             className="p-3 h-[60px] sm:h-[80px] md:h-[90px] rounded-xl w-full  focus:outline-purple-500 focus:outline-none focus:border-none  border border-gray-400 backdrop-blur-sm bg-neutral-950/40 text-xl sm:text-2xl md:text-3xl placeholder:text-neutral-500/70 text-neutral-200 "
