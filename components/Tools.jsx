@@ -173,7 +173,7 @@ const Card = ({ id, heading, desc,image,height, width }) => {
           {heading}
         </h3>
         <div className="flex flex-col md:flex-row gap-y-3 justify-center gap-x-6 items-center">
-        <p className="mt-1 lg:mt-4 opacity-75 text-xs text-neutral-100 md:text-base max-w-xl">{desc}</p>
+        <p className="mt-1 lg:mt-4 opacity-75 text-xs text-neutral-100 lg:text-base max-w-xl">{desc}</p>
         <Image src={image} alt="Tool image" height={height} width={width} className="object-contain w-[170px] h-[120px] lg:w-[180px] lg:h-[130px]  "  />
         </div>
       </div>

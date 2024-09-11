@@ -1,0 +1,8 @@
+SMTPEMAIL="scriptershubltd@gmail.com"
+FROMEMAIL="scriptershubltd@gmail.com"
+LOGIN="scriptershubltd@gmail.com"
+SMTPPASSWORD="sDGQvCFWLgOA9XKP"
+
+
+RECAPTCHA_SITE_KEY=6LdlnyIpAAAAAO3jl8iqrfTTTKr8Y3t3vcuqv6p9
+RECAPTCHA_SECRET_KEY=6LdlnyIpAAAAAD0qZvenrme5FhbmC7qeIL77GEor

@@ -59,7 +59,7 @@ const Portfolio = () => {
         Our Portfolio
       </h2>
       <div className=" w-full  h-[1000px]  flex justify-center items-start">
-        <div className="flex mx-auto flex-col gap-y-5">
+        <div className="flex mx-4 lg:mx-auto flex-col gap-y-5 ">
           <div className="h-full absolute left-0 top-44 w-screen">
             <PortfolioCard
               tag1={"web"}
@@ -138,14 +138,14 @@ const PortfolioCard = ({
   image,
 }) => {
   return (
-    <div className={`sticky top-52 md:top-72  ${classes}`}>
+    <div className={`sticky top-64 xl:top-72 ${classes}`}>
       <motion.div
         style={{
           y: y,
           scale: scale,
           opacity: opacity,
         }}
-        className="w-[300px] sm:w-[600px] md:w-[700px] lg:w-[1000px] xl:w-[1100px] mx-auto backdrop-blur-lg bg-neutral-400/15 h-[350px]  p-5 rounded-xl flex flex-col justify-center gap-y-5"
+        className="lg:w-[1000px] xl:w-[1100px] mx-auto backdrop-blur-lg bg-neutral-400/15 lg:h-[350px]  p-5 rounded-xl flex flex-col justify-center gap-y-5"
       >
         <div className=" sm:flex hidden gap-x-4 font-thin">
           <div className="border-[0.5px] text-neutral-100 text-xs border-neutral-400 rounded-full p-1 px-3">
@@ -158,12 +158,12 @@ const PortfolioCard = ({
             {tag3}
           </div>
         </div>
-        <div className="flex flex-col sm:flex-row gap-y-5 justify-between items-start">
+        <div className="flex flex-col lg:flex-row gap-y-5 justify-between items-start">
           <div className="flex flex-col  gap-y-2 sm:gap-x-5">
             <span className="text-neutral-100 text-xl sm:text-2xl  font-semibold">
               {heading}
             </span>
-            <span className="text-white text-xs sm:text-[16px] leading-6 opacity-65 w-[250px] md:w-[300px] lg:w-[450px] ">
+            <span className="text-white text-xs sm:text-[16px] leading-6 opacity-65  lg:w-[450px] ">
               {desc}
             </span>
           </div>
