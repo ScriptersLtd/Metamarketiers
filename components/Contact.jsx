@@ -145,7 +145,9 @@ const Contact = () => {
           pauseOnHover
         />
     </div>
-      <Footer />
+      
+      <Footer line1={"Through best-in-class branding agency services, we fuse creativity with strategy, crafting visually striking and strategically sound brands that don’t just fit in—they dominate!"} heading={"The Digital Marketing Toolkit We Rely on for Powering Your Success"} button={"Talk to us!"} />
+
     </>
     );
 };
