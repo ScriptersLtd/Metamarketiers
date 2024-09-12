@@ -4,6 +4,7 @@ import { Menu } from "@/components/menu/Menu";
 import SmoothScrolling from "@/components/SmoothScrolling";
 import Link from "next/link";
 import Image from "next/image";
+import TawkToMessenger from "@/components/Tawkto";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -73,6 +74,10 @@ export default function RootLayout({ children }) {
           {children}
           </main>
           </SmoothScrolling>
+          <div className="fixed top-0 left-0">
+
+          <TawkToMessenger />
+          </div>
       </body>
 
     </html>

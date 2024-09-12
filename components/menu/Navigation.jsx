@@ -88,4 +88,4 @@ const socials = [
   { name: "X", url: "https://x.com/aiosols" },
   { name: "LINKEDIN", url: "https://www.linkedin.com/company/aiosols/" }
 ];
-const itemIds = [{name:"HOME", href:"/"}, {name:"SERVICES", href:"/services"}, {name:"BLOGS", href:"/blog"}, {name:"ABOUT US", href:"/aboutus"}, {name:"CONTACT",href:"/contact"}];
+const itemIds = [{name:"HOME", href:"/"}, {name:"SERVICES", href:"/services"}, {name:"BLOGS", href:"#"}, {name:"ABOUT US", href:"/aboutus"}, {name:"CONTACT",href:"/contact"}];

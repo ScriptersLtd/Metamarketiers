@@ -152,7 +152,7 @@ const DesignTypes = () => {
           </div>
         </div>
         <div className=" h-full absolute right-0 top-10 lg:top-0">
-          <div className="sticky top-[50px] w-[190px] sm:w-[250px] xl:w-[380px] text-neutral-200 pt-[40px] z-10">
+          <div className="sticky top-[50px] w-[220px] sm:w-[350px] xl:w-[450px] text-neutral-200 pt-[40px] z-10">
             <AnimatePresence mode="wait">
               {inView === "card1" && (
                 <motion.div
@@ -163,7 +163,7 @@ const DesignTypes = () => {
                   transition={{ duration: 0.5 }}
                   className="bg-neutral-950/25 2xl:bg-transparent 2xl:backdrop-blur-none backdrop-blur-xl p-2 rounded-l-lg flex flex-col gap-y-5"
                 >
-                  <p className="text-left text-sm md:text-md ">
+                  <p className="text-left text-sm md:text-lg ">
                     Designing the Future of Connectivity At SYNC, our
                     result-driven web design services go beyond just creating a
                     site; we built a digital playground where connectivity
