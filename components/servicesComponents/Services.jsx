@@ -9,8 +9,8 @@ import Link from "next/link";
 
 const ServicesBox = () => {
   return (
-    <div className="relative h-[2200px] sm:h-[2600px] lg:h-[1640px] xl:h-[1640px] overflow-hidden">
-      <div className=" bg-neutral-950 h-[1600px] sm:h-[2000px] lg:h-[1000px] relative flex justify-center items-center py-20 z-10">
+    <div className="relative h-[2200px] sm:h-[2600px] lg:h-[1640px] xl:h-[1640px]">
+      <div className=" bg-neutral-950 h-[1600px] sm:h-[2000px] lg:h-[1000px] relative flex justify-center items-center py-20 z-10 overflow-clip">
         <div className="absolute top-52 left-[50%] h-[350px] w-[550px] rounded-[120px] bg-purple-600  opacity-20 blur-3xl"></div>
         <div className="absolute top-96 right-[40%] h-[400px] w-[600px] rounded-[120px] bg-blue-600  opacity-20 blur-3xl "></div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 justify-center items-center">
@@ -25,7 +25,6 @@ const ServicesBox = () => {
               </>
             }
             link={"/branding"}
-
           />
           <UpperServiceCard
             title={<>Web Development</>}
@@ -52,7 +51,6 @@ const ServicesBox = () => {
               </>
             }
             link={"/web-design"}
-
           />
           <LowerServiceCard
             title={<>Digital Marketing</>}
@@ -66,11 +64,18 @@ const ServicesBox = () => {
               </>
             }
             link={"/digital-marketing-services"}
-            
           />
         </div>
       </div>
-      <Footer line1={"From powerful optimization to eye-catching web design, we provide everything you need to make your brand shine and succeed online!"} heading={"Why Wait When You Can Drive Real Results with a Full Suite of Our Digital Services?"} button={"Let's do great things together"} />
+      <Footer
+        line1={
+          "From powerful optimization to eye-catching web design, we provide everything you need to make your brand shine and succeed online!"
+        }
+        heading={
+          "Why Wait When You Can Drive Real Results with a Full Suite of Our Digital Services?"
+        }
+        button={"Let's do great things together"}
+      />
     </div>
   );
 };
@@ -85,8 +90,8 @@ const UpperServiceCard = ({ title, desc, link }) => {
   const y2 = useTransform(scrollYProgress, [0.2, 0.5, 0.8], [-100, -100, -385]);
 
   return (
-    <Link 
-    href={link}
+    <Link
+      href={link}
       ref={UpperserviceRef}
       className="flex flex-col gap-y-5 justify-center items-start h-[300px] w-[300px] sm:h-[400px] sm:w-[400px] bg-neutral-800/25 z-10 rounded-xl relative p-3 overflow-hidden hover:bg-neutral-800/50 transition-all duration-200 "
     >
@@ -98,8 +103,12 @@ const UpperServiceCard = ({ title, desc, link }) => {
         style={{ y: y2, rotate: "45deg" }}
         className="h-[250px] w-[250px]  absolute -bottom-72 left-5 rotate-45 -z-10 bg-neutral-300/20"
       ></motion.div>
-      <span className="text-neutral-200  text-3xl sm:text-4xl z-10">{title}</span>
-      <p className="text-neutral-200 max-w-96 text-sm sm:text-md z-10">{desc}</p>
+      <span className="text-neutral-200  text-3xl sm:text-4xl z-10">
+        {title}
+      </span>
+      <p className="text-neutral-200 max-w-96 text-sm sm:text-md z-10">
+        {desc}
+      </p>
     </Link>
   );
 };
