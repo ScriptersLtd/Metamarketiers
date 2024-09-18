@@ -153,7 +153,7 @@ const Hero = () => {
                 className="mt-10 flex flex-col justify-center items-center px-3 z-50"
               >
                 <motion.h1 className=" font-semibold text-center text-neutral-100  text-3xl xl:text-4xl 2xl:text-5xl pb-6 leading-tight flex flex-col max-w-4xl z-50">
-                  <motion.span initial={{ opacity: 0, y: 80 }} >Magnifying Your Digital Impact with Majestic Web Design and Development Agency</motion.span>
+                  <motion.span initial={{ opacity: 0, y: 80 }} >Magnify Your Impact with Magnetic Web Design & Development Agency</motion.span>
                 </motion.h1>
                 <p className=" text-center text-neutral-200 text-base md:text-lg flex flex-col z-50 ">
                   <motion.span initial={{ opacity: 0, y: 80 }}>

@@ -63,9 +63,9 @@ const Tools = () => {
                
             transition: "transform 1s", 
           }}
-          className="text-[40px] lg:text-[90px]  h-fit  font-bold text-transparent bg-clip-text bg-gradient-to-r  from-purple-700 to-sky-500 w-fit z-10 "
+          className="text-[25px] lg:text-[90px]  h-fit  font-bold text-transparent bg-clip-text bg-gradient-to-r  from-purple-700 to-sky-500 w-fit z-10 "
         >
-          Tools We Use
+          Digital Marketing Toolkit
         </motion.h2>
       </div>
       <div className="flex pt-[1000px]  justify-center items-center">

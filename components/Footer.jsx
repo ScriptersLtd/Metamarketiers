@@ -50,7 +50,7 @@ const Footer = ({ line1, heading, button }) => {
 
           <div className="flex gap-4">
             <PhoneIcon />
-            <p>+92 300 0000000</p>
+            <Link href="tel:+12067467149" target="_blank" rel="noopener noreferrer">+1 (206) 746-7149</Link>
           </div>
 
           <div className="flex gap-x-4 mt-6 lg:mt-2">

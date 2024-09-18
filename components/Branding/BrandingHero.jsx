@@ -12,7 +12,7 @@ const BrandingHero = () => {
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 1, ease: [0, 0.01, 0, 1], delay: 0.2 }}
       >
-        Unmatched Logo Design & Branding That Turns Heads, Sell More, and Brings Profit!
+        Unmatched Logo Design & Branding to Turn Heads and Brings Profit!
       </motion.h1>
       <motion.p
         className="text-center text-neutral-100 max-w-4xl z-10 px-3"
