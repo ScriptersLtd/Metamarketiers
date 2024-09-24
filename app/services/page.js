@@ -1,6 +1,6 @@
-import Journey from "@/components/servicesComponents/Journey"
-import ServicesBox from "@/components/servicesComponents/Services"
-import ServicesHero from "@/components/servicesComponents/ServicesHero"
+import Journey from "@/components/servicesComponents/Journey";
+import ServicesBox from "@/components/servicesComponents/Services";
+import ServicesHero from "@/components/servicesComponents/ServicesHero";
 
 export const metadata = {
   title: "Leading Digital Marketing Solutions in USA | Aiosols",
@@ -11,8 +11,7 @@ export const metadata = {
     last_updated: "10/23/2023",
   },
   openGraph: {
-    title:
-      "Leading Digital Marketing Solutions in USA | Aiosols",
+    title: "Leading Digital Marketing Solutions in USA | Aiosols",
     deScription:
       "Elevate your brand with Aiosols' comprehensive digital marketing solutions. Contact us to stand out from the competition and thrive online.",
     images: [
@@ -51,17 +50,14 @@ export const metadata = {
   // },
 };
 
-
 const Services = () => {
   return (
     <div>
-<ServicesHero />
-<Journey />
-
-<ServicesBox />
-
+      <ServicesHero />
+      <Journey />
+      <ServicesBox />
     </div>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

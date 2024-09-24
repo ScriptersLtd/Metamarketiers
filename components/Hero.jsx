@@ -150,12 +150,12 @@ const Hero = () => {
             {onLogoAnimationgComplete && (
               <motion.div
                 ref={scope}
-                className="mt-10 flex flex-col justify-center items-center px-3 z-50"
+                className="mt-10 flex flex-col justify-center items-center px-3 z-20"
               >
                 <motion.h1 className=" font-semibold text-center text-neutral-100  text-3xl xl:text-4xl 2xl:text-5xl pb-6 leading-tight flex flex-col max-w-4xl z-50">
                   <motion.span initial={{ opacity: 0, y: 80 }} >Magnify Your Impact with Magnetic Web Design & Development Agency</motion.span>
                 </motion.h1>
-                <p className=" text-center text-neutral-200 text-base md:text-lg flex flex-col z-50 ">
+                <p className=" text-center text-neutral-200 text-base md:text-lg flex flex-col z-20 max-w-5xl">
                   <motion.span initial={{ opacity: 0, y: 80 }}>
                   “From picking the perfect name to your grand digital debut, maximize your digital dreams into dynamic realities, where creativity sparks connections and innovation ignites possibilities.”
                   </motion.span>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 
-const Portfolio = () => {
+const   Portfolio = () => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -59,7 +59,7 @@ const Portfolio = () => {
         Our Portfolio
       </h2>
       <div className=" w-full  h-[1000px]  flex justify-center items-start">
-        <div className="flex mx-4 lg:mx-auto flex-col gap-y-5 ">
+        <div className="flex mx-4 lg:mx-auto flex-col ">
           <div className="h-full absolute left-0 top-44 w-screen">
             <PortfolioCard
               tag1={"web"}
@@ -71,7 +71,7 @@ const Portfolio = () => {
               }
               scale={scale1}
               opacity={opacity1}
-              image={"/image_6.png"}
+              image={"/portfolioimg1.jpg"}
             />
           </div>
           <div className="h-full absolute left-0 top-[900px] w-screen">
@@ -85,7 +85,7 @@ const Portfolio = () => {
               }
               opacity={opacity2}
               scale={scale2}
-              image={"/image_6.png"}
+              image={"/portfolioimg2.jpg"}
             />
           </div>
 
@@ -98,10 +98,9 @@ const Portfolio = () => {
               desc={
                 "We revamped this e-commerce platform with a clean, intuitive design that highlights top products and simplifies shopping. From eye-catching product displays that scream ‘Buy me now!’ to a smooth checkout, we crafted an easy-to-navigate digital shopping experience that feels like personalized shopping—driving engagement and fueling sales with every click!"
               }
-              y={y3}
               scale={scale3}
               opacity={opacity3}
-              image={"/image_6.png"}
+              image={"/portfolioimg4.jpg"}
             />
           </div>
           <div className="h-full absolute left-0 top-[2500px] w-screen">
@@ -113,10 +112,9 @@ const Portfolio = () => {
               desc={
                 "For the athlete-focused brand, we didn’t just build a page; we built a vibe! Our logo design company’s approach  infused the page with high-energy visuals and motivational messaging that reflect the brand’s core values. The result? A powerful connection with the audience that goes beyond products—it’s about embracing the athlete mindset!"
               }
-              y={y4}
               opacity={opacity4}
               scale={scale4}
-              image={"/image_6.png"}
+              image={"/portfolioimg3.jpg"}
             />
           </div>
         </div>
@@ -138,10 +136,9 @@ const PortfolioCard = ({
   image,
 }) => {
   return (
-    <div className={`sticky top-64 xl:top-72 ${classes}`}>
+    <div className={`sticky top-44 xl:top-44 ${classes}`}>
       <motion.div
         style={{
-          y: y,
           scale: scale,
           opacity: opacity,
         }}
